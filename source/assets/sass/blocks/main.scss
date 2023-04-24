@@ -1,0 +1,102 @@
+.main {
+    background-color: $bg-white;
+
+    @media (max-width: $adaptive-width) {
+        padding: 0 $spacing-2l;
+    }
+
+    &__title {
+        @include h1;
+        text-align: center;
+        padding-top: $spacing-4xl;
+        margin: 0 auto $spacing-2xl;
+        width: 795px;
+
+        @media (max-width: $adaptive-width) {
+            width: auto;
+            padding-top: $spacing-xl;
+            margin: 0 auto $spacing-2l;
+        }
+    }
+
+    &__decription {
+        @include h3;
+        text-align: center;
+        color: $text-tertiary;
+        margin-bottom: 88px;
+
+        @media (max-width: $adaptive-width) {
+            margin-bottom: 74px;
+        }
+    }
+
+    &__city {
+        display: flex;
+        align-items: center;
+        gap: $spacing-xl;
+        margin-bottom: $spacing-3xl;
+
+        @media (max-width: $adaptive-width) {
+            justify-content: space-between;
+            margin-bottom: $spacing-xl;
+        }
+
+        &_competition {
+            justify-content: space-between;
+            padding: $spacing-2xl 0;
+            margin: 0;
+
+            @media (max-width: $adaptive-width) {
+                flex-direction: column;
+                align-items: flex-start;
+                margin-bottom: $spacing-l;
+                gap: $spacing-l;
+            }
+        }
+    }
+
+    &__nearest-city {
+        display: flex;
+        gap: $spacing-s;
+
+        @media (max-width: $adaptive-width) {
+            overflow-x: auto;
+            width: 100%;
+            padding-bottom: $spacing-s;
+            padding-top: 1px;
+            padding-left: 1px;
+        }
+    }
+
+    &__current-city {
+        @include P-14-medium;
+        color: $text-tertiary;
+        padding: $spacing-s $spacing-2xl $spacing-s $spacing-l;
+        background-color: $bg;
+        border-radius: 24px;
+        display: flex;
+        align-items: center;
+        border: none;
+    }
+    
+    &__current-city-icon {
+        color: $secondary;
+        margin-left: $spacing-xs;
+    }
+}
+
+@media (max-width: $adaptive-width) {
+    .main {
+        &__current-city-name {
+            display: none;
+    
+            &_competition {
+                display: block;
+            }
+        }
+    
+        &__current-city-km {
+            white-space: nowrap;
+        }
+    }
+}

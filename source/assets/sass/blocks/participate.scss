@@ -1,0 +1,115 @@
+.participate {
+    &__title {
+        margin-bottom: 42px;
+
+        @media (max-width: $adaptive-width) {
+            margin-bottom: $spacing-l;
+        }
+    }
+
+    &__finished {
+        margin: 42px 0;
+
+        @media (max-width: $adaptive-width) {
+            margin: $spacing-2xl 0 $spacing-xl;
+        }
+    }
+
+    &__header {
+        display: flex;
+        align-items: center;
+
+        @media (max-width: $adaptive-width) {
+            flex-direction: column;
+            align-items: flex-start;
+            width: 100%;
+        }
+
+        &_amount {
+            margin-bottom: $spacing-2xl;
+
+            @media (max-width: $adaptive-width) {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                margin-bottom: $spacing-l;
+            }
+        }
+    }
+
+    &__download-wrapper {
+        @media (max-width: $adaptive-width) {
+            flex-direction: row;
+            align-items: center;
+            margin-top: $spacing-l;
+        }
+    }
+
+    &__select {
+        width: 185px;
+        margin-left: $spacing-2xl;
+
+        @media (max-width: $adaptive-width) {
+            margin: $spacing-l 0 0 0;
+            width: 100%;
+        }
+    }
+
+    &__amount {
+        min-width: 40px;
+        height: 40px;
+        border: 1px solid $line;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $text-tertiary;
+        margin-left: $spacing-s;
+    }
+
+    &__name {
+        display: flex;
+        align-items: center;
+    }
+
+    &__avatar {
+        margin-right: $spacing-l;
+        border-radius: 50%;
+    }
+
+    &__avatar-block {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        background-color: $bg;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: $spacing-l;
+    }
+
+    &__table {
+        margin-bottom: $spacing-3xl;
+
+        @media (max-width: $adaptive-width) {
+            min-width: 800px;
+            margin-bottom: $spacing-m;
+        }
+    }
+
+    &__download {
+        min-width: 40px;
+        height: 40px;
+        border: 1px solid $line;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: $spacing-s;
+        cursor: pointer;
+
+        &_whole {
+            margin: 0 $spacing-s 0 0;
+        }
+    }
+}

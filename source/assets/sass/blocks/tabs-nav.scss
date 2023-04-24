@@ -1,0 +1,38 @@
+.tabs-nav {
+	display: flex;
+
+    @media (max-width: $adaptive-width) {
+        overflow: scroll;
+        height: 52px;
+    }
+
+    &__item {
+        cursor: pointer;
+        padding: $spacing-l $spacing-xl;
+        margin-right: $spacing-s;
+        display: flex;
+        align-items: center;
+
+        @media (max-width: $adaptive-width) {
+            min-width: max-content;
+        }
+
+        &.is-active {
+            background-color: $bg-white;
+            border: 1px solid $line;
+            border-bottom: none;
+        }
+    }
+
+    &__amount {
+        min-width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        background-color: $secondary;
+        margin-left: $spacing-s;
+        color: $bg-white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

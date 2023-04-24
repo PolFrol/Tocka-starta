@@ -1,0 +1,33 @@
+.registration {
+    &__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__data {
+        padding-top: 42px;
+    }
+
+    &__row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: $spacing-2l;
+
+        @media (max-width: $adaptive-width) {
+            display: block;
+            margin: 0;
+        }
+    }
+
+    &__col {
+        display: flex;
+        flex-direction: column;
+        margin-top: $spacing-l;
+    }
+
+    &__btn {
+        margin-top: $spacing-2xl;
+        display: inline-block;
+    }
+}

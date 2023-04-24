@@ -1,0 +1,461 @@
+.new {
+    &__wrapper {
+        width: 740px;
+        background-color: $bg-white;
+        box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.04);
+        border-radius: 4px;
+        padding: 40px 40px 0;
+        margin: 0 auto;
+        position: relative;
+
+        @media (max-width: $adaptive-width) {
+            width: 100%;
+            border-radius: 16px;
+            padding: 28px $spacing-2l 0;
+        }
+
+        // &_line {
+        //     &::before {
+        //         content: "";
+        //         position: absolute;
+        //         width: 100%;
+        //         height: 4px;
+        //         top: 0;
+        //         left: 0;
+        //         background-color: $secondary;
+        //     }
+        // }
+
+        &_add-content {
+            width: 100%;
+        }
+
+        &_success {
+            height: 670px;
+
+            @media (max-width: $adaptive-width) {
+                height: 505px;
+            }
+        }
+
+        &_content {
+            min-height: 670px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+    }
+
+    &__step-name {
+        color: $text-tertiary;
+
+        @media (max-width: $adaptive-width) {
+            display: none;
+        }
+    }
+
+    &__step {
+        width: 32px;
+        height: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        border: 2px solid $line;
+        margin-right: $spacing-s;
+        color: $text-primary;
+        position: relative;
+
+        &_completed {
+            border-color: $secondary;
+
+            &::before {
+                content: '';
+                position: absolute;
+                background: url('../img/check.svg') no-repeat;
+                width: 19px;
+                height: 19px;
+                top: -8px;
+                right: -10px;
+            }
+        }
+    }
+
+    &__step-list {
+        display: flex;
+        padding-top: 28px;
+        padding-bottom: $spacing-2xl;
+    }
+
+    &__step-item {
+        position: relative;
+        &:not(:last-child) {
+            margin-right: 47px;
+
+            &::before {
+                content: "";
+                position: absolute;
+                width: 31px;
+                height: 1px;
+                background-color: $line;
+                top: 17px;
+                right: -39px;
+            }
+        }
+    }
+
+    &__step-link {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+
+        &_active {
+            .new__step {
+                background-color: $primary;
+                border: none;
+                color: $bg-white;
+            }
+
+            .new__step-name {
+                color: $text-primary;
+            }
+        }
+    }
+
+    &__content-editor {
+        width: 100%;
+        height: 320px;
+        margin-bottom: 42px;
+
+        @media (max-width: $adaptive-width) {
+            height: 345px;
+        }
+    }
+
+    &__img {
+        @media (max-width: $adaptive-width) {
+            width: 132px;
+            height: 100px;
+        }
+    }
+
+    &__btn-upload {
+        display: inline-block;
+        margin-bottom: $spacing-m;
+    }
+
+    &__upload-icon {
+        margin-right: $spacing-s;
+    }
+
+    &__photo-edit {
+        padding-bottom: $spacing-l;
+        border-bottom: 1px solid $line;
+
+        @media (max-width: $adaptive-width) {
+            margin: 0 -#{$spacing-2l};
+            padding: 0 $spacing-2l $spacing-l;
+        }
+    }
+
+    &__text {
+        color: $text-tertiary;
+        margin-left: $spacing-s;
+        margin-bottom: $spacing-l;
+
+        @media (max-width: $adaptive-width) {
+            margin-left: 0;
+        }
+    }
+
+    &__photo {
+        width: 150px;
+        height: 128px;
+        border: 1px solid $line;
+        background-color: #E0F4FF;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: $spacing-2xl;
+
+        @media (max-width: $adaptive-width) {
+            margin: 0 0 $spacing-2l 0;
+        }
+    }
+
+    &__photo-title {
+        padding-top: $spacing-m;
+        margin-bottom: $spacing-s;
+        border-top: 1px solid $line;
+
+        @media (max-width: $adaptive-width) {
+            padding: $spacing-m $spacing-2l 0;
+            margin: 0 -#{$spacing-2l} $spacing-s -#{$spacing-2l};
+        }
+    }
+
+    &__photo-descr {
+        display: flex;
+        margin-bottom: $spacing-2l;
+
+        @media (max-width: $adaptive-width) {
+            flex-direction: column;
+            margin-bottom: $spacing-2xl;
+        }
+    }
+
+    &__photo-text {
+        color: $text-tertiary;
+    }
+
+    &__continue {
+        padding: $spacing-xl 40px;
+        border-top: 2px solid $line;
+        margin: 0 -40px;
+        display: flex;
+        justify-content: space-between;
+
+        @media (max-width: $adaptive-width) {
+            flex-direction: column;
+            margin: 0 -#{$spacing-2l};
+            padding: $spacing-xl $spacing-2l 45px;
+        }
+
+        &_registration {
+            margin: 0;
+
+            @media (max-width: $adaptive-width) {
+                padding: $spacing-2l $spacing-2l $spacing-xl;
+            }
+        }
+    }
+
+    &__descr {
+        color: $text-secondary;
+        margin-top: $spacing-s;
+    }
+
+    &__table-action {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: $spacing-xl;
+        padding-bottom: $spacing-m;
+
+        @media (max-width: $adaptive-width) {
+            padding-bottom: $spacing-xl;
+        }
+
+        &_with-button {
+            padding-bottom: $spacing-2l;
+
+            @media (max-width: $adaptive-width) {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    }
+
+    &__buttons {
+        @media (max-width: $adaptive-width) {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: $spacing-l;
+        }
+    }
+
+    &__btn-add {
+        border: none;
+        background-color: transparent;
+        color: $text-tertiary;
+        padding: 0;
+        transition: color 0.3s ease-in-out;
+
+        &_small {
+            @include P-12;
+            width: auto;
+        }
+
+        &:hover {
+            color: $text-primary;
+
+            .new__btn-add-icon {
+                color: currentColor;
+            }
+        }
+
+        @media (max-width: $adaptive-width) {
+            @include P-12;
+        }
+
+    }
+
+    &__btn-add-icon {
+        color: $text-tertiary;
+        transition: color 0.3s ease-in-out;
+    }
+
+    &__social {
+        padding-top: $spacing-l;
+        border-top: 1px solid $line;
+    }
+
+    &__personal-data {
+        margin-bottom: $spacing-2l;
+    }
+
+    &__social-input {
+        padding: $spacing-xl 0 $spacing-3xl;
+    }
+
+    &__date {
+        color: $text-primary;
+        padding-bottom: $spacing-s;
+
+        @media (max-width: $adaptive-width) {
+            padding-bottom: $spacing-xl;
+        }
+    }
+
+    &__table {
+        border-bottom: 1px solid $line;
+        margin-bottom: 118px;
+
+        @media (max-width: $adaptive-width) {
+            min-width: 660px;
+            margin-bottom: $spacing-2xl;
+        }
+    }
+
+    &__btn-back {
+        margin-right: $spacing-m;
+    }
+
+    &__success {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 455px;
+        margin: 122px auto 0;
+
+        @media (max-width: $adaptive-width) {
+            width: 100%;
+            margin-top: 62px;
+        }
+    }
+
+    &__success-title {
+        margin: 37px auto $spacing-xl;
+    }
+
+    &__success-text {
+        margin-bottom: $spacing-3xl;
+        width: 395px;
+
+        @media (max-width: $adaptive-width) {
+            width: 100%;
+        }
+    }
+
+    &__content {
+        color: $text-secondary;
+        margin: $spacing-2l 0 42px;
+
+        @media (max-width: $adaptive-width) {
+            margin: $spacing-l 0 $spacing-xl;
+        }
+    }
+
+    &__content-upload {
+        display: flex;
+        margin-bottom: $spacing-2xl;
+
+        @media (max-width: $adaptive-width) {
+            flex-direction: column;
+        }
+    }
+
+    &__content-text {
+        margin-left: $spacing-xl;
+        color: $text-tertiary;
+
+        @media (max-width: $adaptive-width) {
+            margin: $spacing-m 0 0 0;
+        }
+    }
+
+    &__content-photo-container {
+        margin-bottom: $spacing-4xl;
+
+        @media (max-width: $adaptive-width) {
+            margin-bottom: $spacing-2xl;
+        }
+    }
+
+    &__content-photo {
+        position: relative;
+        margin-bottom: $spacing-2l;
+
+        @media (max-width: $adaptive-width) {
+            width: auto;
+            margin-bottom: $spacing-m;
+            padding: 0 $spacing-s;
+        }
+    }
+
+    &__btn-trash {
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        background-color: $bg-white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: 4px;
+        right: 18px;
+        border: 1px solid $line;
+        cursor: pointer;
+    }
+
+    &__btn-publick {
+        @media (max-width: $adaptive-width) {
+            display: none;
+        }
+    }
+
+    &__btn-next {
+        display: none;
+
+        @media (max-width: $adaptive-width) {
+            display: block;
+        }
+    }
+
+    &__btn-adaptive {
+        @media (max-width: $adaptive-width) {
+            margin-bottom: $spacing-l;
+        }
+    }
+
+    &__wrapper-adaptive {
+        @media (max-width: $adaptive-width) {
+            overflow: auto;
+            margin: 0 -#{$spacing-2l};
+            margin-bottom: $spacing-2l;
+        }
+    }
+
+    &__table-action-select {
+        padding-right: $spacing-2xl;
+        border: none;
+
+        @media (max-width: $adaptive-width) {
+            &_with-button {
+                margin-bottom: $spacing-m;
+            }
+        }
+    }
+}

@@ -1,0 +1,52 @@
+<nav class="header__nav nav">
+    <div class="nav__wrapper">
+        <div class="nav__item">
+            <div class="nav__logo">
+                <a href="./index.html">
+                    <?= XTZ::getSvgSprite('icon-logo', 106, 36, 'nav__logo-svg') ?>
+                </a>
+            </div>
+        </div>
+        <ul class="nav__list nav__list_hidden">
+            <li class="nav__item">
+                <a class="nav__link"> Cоревнования </a>
+            </li>
+            <li class="nav__item">
+                <a class="nav__link" href="./results.html"> Результаты </a>
+            </li>
+            <li class="nav__item">
+                <a class="nav__link"> Сервис </a>
+            </li>
+            <li class="nav__item">
+                <a class="nav__link"> Ещё </a>
+            </li>
+        </ul>
+    </div>
+
+    <ul class="nav__list nav__list_actions">
+        <li class="nav__item nav__item_actions nav__item_add">
+            <div class="nav__add">
+                <?= XTZ::getSvgSprite('icon-plus-circle', null, null, 'nav__add-icon') ?>
+            </div>
+            <span class="nav__link nav__link_hidden nav__list_hidden"
+                >Добавить соревнование</span
+            >
+        </li>
+        <li class="nav__item nav__item_actions nav__list_hidden">
+            <?= XTZ::getSvgSprite('icon-check-circle') ?>
+        </li>
+        <li class="nav__item nav__item_actions nav__list_hidden">
+            <?= XTZ::getSvgSprite('icon-heart') ?>
+        </li>
+        <li class="nav__item nav__item_actions nav__item_user nav__list_hidden">
+            <div class="nav__avatar-block">
+                <?= XTZ::getSvgSprite('icon-man') ?>
+            </div>
+            <span>Иван</span>
+        </li>
+
+        <li class="nav__item nav__item_burger">
+            <?= XTZ::getSvgSprite('icon-burger') ?>
+        </li>
+    </ul>
+</nav>

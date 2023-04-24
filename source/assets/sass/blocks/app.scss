@@ -1,0 +1,107 @@
+.app {
+    padding-bottom: 138px;
+
+    @media (max-width: $adaptive-width) {
+        padding-bottom: 67px;
+    }
+
+    &__wrapper {
+        height: 370px;
+        background-color: $bg;
+        border-radius: 16px;
+        padding: 58px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: relative;
+
+        @media (max-width: $adaptive-width) {
+            padding: $spacing-2xl $spacing-2l 0;
+            margin: 0 -#{$spacing-2l};
+            height: auto;
+            border-radius: 0;
+        }
+    }
+
+    &__title {
+        display: flex;
+        align-items: center;
+        gap: $spacing-2l;
+    }
+
+    &__icon {
+        width: 95px;
+        height: 95px;
+        background-color: $bg;
+        border: 1px solid $line;
+        box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.16);
+        border-radius: 24px;
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            background-color: $secondary;
+            border-radius: 50%;
+            left: 18px;
+            top: 18px;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            width: 14px;
+            height: 14px;
+            background-color: $bg-white;
+            border-radius: 50%;
+            left: 41px;
+            top: 41px;
+        }
+    }
+
+    &__descr {
+        margin-top: $spacing-l;
+        color: $text-tertiary;
+
+        @media (max-width: $adaptive-width) {
+            margin-bottom: $spacing-3xl;
+        }
+    }
+
+    &__badge {
+        display: flex;
+        gap: $spacing-2l;
+    }
+
+    &__iphone {
+        position: absolute;
+
+        &_big {
+            top: -62px;
+            right: 216px;
+            z-index: 1;
+        }
+
+        &_small {
+            top: -26px;
+            right: 61px;
+        }
+    }
+
+    &__iphone-wrapper-adaptive {
+        display: none;
+
+        @media (max-width: $adaptive-width) {
+            display: block;
+            margin: $spacing-3xl auto 0;
+        }
+    }
+}
+
+@media (max-width: $adaptive-width) {
+    .app__iphone-wrapper {
+        display: none;
+    }
+}

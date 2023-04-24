@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <title>Точка старта</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="<?=SITE_TEMPLATE_PATH?>/assets/css/style.css" rel="stylesheet">
+</head>
+
+<body class="body">
+    @@INC:(block/header/auth.html)
+
+    <main>
+        <div class="container">
+            <div class="about-header__back about-header__back_new">
+                <div class="about-header__button-back">
+                    <svg width="24" height="24">
+                        <use xlink:href="<?=SITE_TEMPLATE_PATH?>/assets/img/sprite.svg#icon-arrow-left"></use>
+                    </svg>
+                </div>
+                <p>Назад</p>
+            </div>
+
+            <div class="new">
+                <h2 class="registration-on-competition__header">Регистрация на соревнование</h2>
+                <div class="registration-on-competition__content">
+                    <div class="registration-on-competition__success">
+                        <svg width="51" height="51">
+                            <use xlink:href="<?=SITE_TEMPLATE_PATH?>/assets/img/sprite.svg#icon-success"></use>
+                        </svg>
+                        <h2 class="new__success-title">Заявка отправлена</h2>
+                        <p class="registration-on-competition__success-text">Ожидайте подтверждение на почту. Участник(и) в скором времени будут<br>опубликованы на странице соревнования</p>
+                            <div class="table__wrapper-adaptive">
+                                <div class="registration-on-competition__table">
+                                    <div class="registration-on-competition__table-row table__row row">
+                                        <div class="col-1 table__col_center">1</div>
+                                        <div class="col-4 participate__name">
+                                            <img class="participate__avatar" src="<?=SITE_TEMPLATE_PATH?>/assets/img/avatar.webp"
+                                                    width="32" height="32" alt="Аватар">
+                                                <span>Сальникова Виктория</span>
+                                        </div>
+                                        <div class="col-2">Спутник</div>
+                                        <div class="col-3">2012</div>
+                                        <div class="col-2">2 взр.</div>
+                                    </div>
+                                    <div class="table__row row">
+                                        <div class="col-1 table__col_center">1</div>
+                                        <div class="col-4 participate__name">
+                                            <img class="participate__avatar" src="<?=SITE_TEMPLATE_PATH?>/assets/img/avatar.webp"
+                                                    width="32" height="32" alt="Аватар">
+                                                <span>Сальникова Виктория</span>
+                                        </div>
+                                        <div class="col-2">Спутник</div>
+                                        <div class="col-3">2012</div>
+                                        <div class="col-2">2 взр.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                        <a class="button-primary registration-on-competition__btn" href="./cabinet.html">В кабинет</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    @@INC:(block/footer/auth.html)
+    <script src="<?=SITE_TEMPLATE_PATH?>/assets/js/script.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>  
+</body>
+
+</html>

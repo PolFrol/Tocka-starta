@@ -1,0 +1,76 @@
+.footer-nav {
+    @include P-14-medium;
+    display: flex;
+    gap: 85px;
+
+    @media (max-width: $adaptive-width) {
+        margin: 60px 0 $spacing-3xl;
+        gap: 48px;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: $spacing-m;
+    }
+
+    &__button {
+        background-color: transparent;
+        color: $bg-white;
+        border-radius: 24px;
+        padding: $spacing-m $spacing-2l;
+        border: 2px solid $text-secondary;
+        text-align: center;
+        cursor: pointer;
+        transition: all 0.2s;
+        flex: 1;
+
+        &:hover,
+        &:focus,
+        &:active {
+            border-color: $bg-white;
+        }
+
+        @media (max-width: $adaptive-width) {
+            display: none;
+        }
+    }
+
+    &__button-adaptive {
+        display: none;
+
+        @media (max-width: $adaptive-width) {
+            display: block;
+            background-color: transparent;
+            color: $bg-white;
+            border-radius: 24px;
+            padding: $spacing-m $spacing-2l;
+            border: 2px solid $text-secondary;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.2s;
+            flex: 1;
+        }
+    }
+
+    &__button-primary {
+        flex: 1;
+        transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+
+        &:hover,
+        &:focus,
+        &:active {
+            background-color: $bg-white;
+            color: $text-primary;
+        }
+    }
+
+    &__link {
+        color: $bg-white;
+
+        &:visited {
+            color: $bg-white;
+        }
+    }
+}
+

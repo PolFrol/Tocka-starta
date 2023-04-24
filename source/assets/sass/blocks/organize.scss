@@ -1,0 +1,144 @@
+.organize {
+    &__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @media (max-width: $adaptive-width) {
+            flex-direction: column;
+            align-items: flex-start;
+            margin-bottom: $spacing-2xl;
+        }
+    }
+
+    &__title {
+        @media (max-width: $adaptive-width) {
+            margin-bottom: $spacing-xl;
+        }
+    }
+
+    &__btn {
+        display: flex;
+        align-items: center;
+
+        &:not(:last-child) {
+            margin-right: $spacing-m;
+
+            @media (max-width: $adaptive-width) {
+                margin-right: 0;
+            }
+        }
+
+        @media (max-width: $adaptive-width) {
+            margin-bottom: $spacing-l;
+            justify-content: center;
+        }
+    }
+
+    &__add-icon {
+        margin-right: $spacing-s;
+    }
+
+    &__toggle {
+        display: flex;
+        align-items: center;
+        padding: $spacing-3xl 0 $spacing-2xl;
+
+        @media (max-width: $adaptive-width) {
+            display: none;
+        }
+    }
+
+
+
+    &__btn-icon {
+        margin-right: $spacing-s;
+
+        &_primary {
+            color: $bg-white;
+        }
+    }
+
+    &__btn-message {
+        margin-right:  $spacing-s;
+    }
+
+    &__info {
+        padding: $spacing-m $spacing-l $spacing-xl;
+        border: 1px solid #EAEAEA;
+        box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.04);
+        border-radius: 16px;
+        margin-top: $spacing-2xl;
+
+        @media (max-width: $adaptive-width) {
+            margin-top: $spacing-l;
+        }
+    }
+
+    &__data {
+        display: flex;
+    }
+
+    &__name {
+        color: $text-secondary;
+        margin-bottom: $spacing-xs;
+    }
+
+    &__avatar {
+        width: 44px;
+        height: 44px;
+        margin-right: $spacing-s;
+        border-radius: 50%;
+    }
+
+    &__actions {
+        display: flex;
+        margin-top: $spacing-l;
+    }
+
+    &__place {
+        margin-top: $spacing-2xl;
+        margin-bottom: $spacing-m;
+
+        @media (max-width: $adaptive-width) {
+            margin-top: $spacing-2l;
+            width: auto;
+            height: 200px;
+        }
+    }
+
+    &__place-decr {
+        color: $text-tertiary;
+        margin-bottom: 46px;
+    }
+
+    &__aside {
+        margin-left: 46px;
+
+        @media (max-width: $adaptive-width) {
+            margin: $spacing-xl 0 0 0;
+        }
+    }
+
+    &__partner {
+        height: 78px;
+        border: 1px solid #EAEAEA;
+        box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.04);
+        border-radius: 16px;
+        padding: $spacing-m $spacing-xl;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &_first {
+            margin-bottom: $spacing-m;
+            margin-top: $spacing-xl;
+        }
+    }
+
+    &__offer {
+        color: $text-secondary;
+        margin-bottom: $spacing-xs;
+        @include P-16;
+    }
+}

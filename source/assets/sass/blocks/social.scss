@@ -1,0 +1,21 @@
+.social {
+    &__list { 
+        display: flex;
+        gap: $spacing-s;
+        margin-bottom: $spacing-2xl;
+
+        @media (max-width: $adaptive-width) {
+            margin-bottom: $spacing-xl;
+        }
+    }
+
+    &__action {
+        display: flex;
+        align-items: center;
+        gap: $spacing-m;
+    }
+
+    &__icon {
+        color: $text-secondary;
+    }
+}

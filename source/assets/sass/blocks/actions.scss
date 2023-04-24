@@ -1,0 +1,54 @@
+.actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 45px;
+
+    @media (max-width: $adaptive-width) {
+        padding: 0;
+        margin-top: 51px;
+    }
+
+    &__active-icon {
+        min-width: 40px;
+        height: 40px;
+        background-color: $primary;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @media (max-width: $adaptive-width) {
+            min-width: 64px;
+            border-radius: 24px;
+        }
+    }
+
+    &__list {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+    }
+
+    &__list-dropdown {
+        display: none;
+
+        @media (max-width: $adaptive-width) {
+            display: block;
+            color: $bg-white;
+            opacity: 0.5;
+        }
+    }
+
+    &__item {
+        padding: 0;
+        background-color: transparent;
+        border: none;
+        
+        &_adaptive {
+            @media (max-width: $adaptive-width) {
+                display: none;
+            }
+        }
+    }
+}

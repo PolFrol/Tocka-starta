@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <title>Точка старта</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="<?=SITE_TEMPLATE_PATH?>/assets/css/style.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body class="body">
+    <header class="header">
+        <div class="container">
+            <div class="header__wrapper">
+                @@INC:(block/header__nav/cabinet.html)
+            </div>
+
+            <div class="header__cabinet cabinet-info">
+
+                <div class="cabinet-info__row row">
+                    <div class="cabinet-info__col col-4 about-header__col">
+                        <div class="cabinet-info__avatar-block">
+                            <svg width="60" height="60">
+                                <use xlink:href="<?=SITE_TEMPLATE_PATH?>/assets/img/sprite.svg#icon-man-l"></use>
+                            </svg>
+                            <a class="cabinet-info__edit" href="#">
+                                <svg width="24" height="24">
+                                    <use xlink:href="<?=SITE_TEMPLATE_PATH?>/assets/img/sprite.svg#icon-edit"></use>
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="cabinet-info__data">
+                            <h3 class="cabinet-info__name">Иванов Иван</h3>
+                            <div>
+                                <span class="cabinet-info__id">ID</span>
+                                <span class="cabinet-info__id-number">4879797</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-2 about-header__col">
+                        <p class="cabinet-info__text">Лыжные гонки</p>
+                        <p class="cabinet-info__desrc">1 взрослый</p>
+                    </div>
+
+                    <div class="col-2 about-header__col">
+                        <p class="cabinet-info__text">Биатлон</p>
+                        <p class="cabinet-info__desrc">КМС</p>
+                    </div>
+
+                    <div class="cabinet-info__col col-4 about-header__col">
+                        <a class="cabinet-info__actions-block cabinet-info__actions-block_social" href="#">
+                            <svg width="24" height="24">
+                                <use xlink:href="<?=SITE_TEMPLATE_PATH?>/assets/img/sprite.svg#icon-vk-cabinet"></use>
+                            </svg>
+                        </a>
+                        <a class="cabinet-info__actions-block" href="#">
+                            <svg width="24" height="24" class="cabinet-info__add-icon">
+                                <use xlink:href="<?=SITE_TEMPLATE_PATH?>/assets/img/sprite.svg#icon-plus-circle"></use>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    </header>
+
+    <main class="flex">
+        <div class="tabs">
+            <ul class="tabs__nav tabs-nav container">
+                <li class="tabs-nav__item is-active" data-tab-name="tab-1">Статистика</li>
+                <li class="tabs-nav__item" data-tab-name="tab-2">Я участвую
+                    <span class="tabs-nav__amount">2</span>
+                </li>
+                <li class="tabs-nav__item" data-tab-name="tab-3">Я организую
+                    <span class="tabs-nav__amount">1</span>
+                </li>
+                <li class="tabs-nav__item" data-tab-name="tab-4">Сообщения</li>
+                <li class="tabs-nav__item" data-tab-name="tab-5">Настройки</li>
+            </ul>
+            <div class="tabs__content">
+                <div class="container">
+                    <div class="tab tab__statistic statistic is-active tab-1">
+                        <div class="tab__content">
+                            <h2 class="statistic__title">Статистика</h2>
+                            <h4 class="tab__table-title">Призовые места</h4>
+
+                            <div class="statistic__prize-row">
+                                <div class="statistic__block-prize">
+                                    <span class="statistic__place">1-е места</span>
+                                    <div class="statistic__prize">
+                                        <svg width="51" height="52">
+                                            <use xlink:href="<?=SITE_TEMPLATE_PATH?>/assets/img/sprite.svg#icon-first">
+                                            </use>
+                                        </svg>
+                                        <h3 class="statistic__prize-amount">1</h3>
+                                    </div>
+                                </div>
+
+                                <div class="statistic__block-prize">
+                                    <span class="statistic__place">3-е места</span>
+                                    <div class="statistic__prize">
+                                        <svg width="51" height="52">
+                                            <use xlink:href="<?=SITE_TEMPLATE_PATH?>/assets/img/sprite.svg#icon-third">
+                                            </use>
+                                        </svg>
+                                        <h3 class="statistic__prize-amount">2</h3>
+                                    </div>
+                                </div>
+
+                                <div class="statistic__block-prize">
+                                    <span class="statistic__place">Рейтинг в лыжах</span>
+                                    <div class="statistic__prize statistic__prize_rating">
+                                        <svg width="24" height="32">
+                                            <use xlink:href="<?=SITE_TEMPLATE_PATH?>/assets/img/sprite.svg#icon-branch">
+                                            </use>
+                                        </svg>
+                                        <h3>1 480</h3>
+                                        <svg width="24" height="32" class="statistic__brunch-icon">
+                                            <use
+                                                xlink:href="<?=SITE_TEMPLATE_PATH?>/assets/img/sprite.svg#icon-branch-right">
+                                            </use>
+                                        </svg>
+                                    </div>
+                                </div>
+
+                                <div class="statistic__block-prize">
+                                    <span class="statistic__place">Рейтинг в биатлоне</span>
+                                    <div class="statistic__prize statistic__prize_rating">
+                                        <svg width="24" height="32">
+                                            <use xlink:href="<?=SITE_TEMPLATE_PATH?>/assets/img/sprite.svg#icon-branch">
+                                            </use>
+                                        </svg>
+                                        <h3>50 478</h3>
+                                        <svg width="24" height="32" class="statistic__brunch-icon">
+                                            <use
+                                                xlink:href="<?=SITE_TEMPLATE_PATH?>/assets/img/sprite.svg#icon-branch-right">
+                                            </use>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h4>Все результаты</h4>
+
+                            <div class="statistic__toggle">
+                                <div class="statistic__toggle-item is-active">
+                                    Лыжные гонки
+                                </div>
+
+                                <div class="statistic__toggle-item">
+                                    Биатлон
+                                </div>
+                            </div>
+                            <div class="table__wrapper-adaptive">
+                                <div class="tab__table table cabinet-info__table">
+                                    <div class="table__header row">
+                                        <div class="col-1 table__header-title">Дата</div>
+                                        <div class="col-4 table__header-title">Соревнование</div>
+                                        <div class="col-3 table__header-title">Группа</div>
+                                        <div class="col-1 table__header-title">Дистанция</div>
+                                        <div class="col-1 table__header-title table__header-title_right">Время</div>
+                                        <div class="col-2 table__header-title table__header-title_center">Место</div>
+                                    </div>
+                                    <div class="table__row row">
+                                        <div class="col-1 table__col table__col_date">16 дек 2022</div>
+                                        <div class="col-4 table__col">Двенадцатое первенство по лыжным гонкам «Даниловская
+                                            лыжня - 2022»</div>
+                                        <div class="col-3 table__col">Юниоры 2000 – 2001</div>
+                                        <div class="col-1 table__col">10 км</div>
+                                        <div class="col-1 table__col table__col_right">9:54</div>
+                                        <div class="col-2 table__col table__col_center">
+                                            <span class="statistic__medal statistic__medal_golden">1</span>
+                                        </div>
+                                    </div>
+                                    <div class="table__row row">
+                                        <div class="col-1 table__col table__col_date">16 дек 2022</div>
+                                        <div class="col-4 table__col">Двенадцатое первенство по лыжным гонкам «Даниловская
+                                            лыжня - 2022»</div>
+                                        <div class="col-3 table__col">Юниоры 2000 – 2001</div>
+                                        <div class="col-1 table__col">10 км</div>
+                                        <div class="col-1 table__col table__col_right">9:54</div>
+                                        <div class="col-2 table__col table__col_center">1</div>
+                                    </div>
+                                    <div class="table__row row">
+                                        <div class="col-1 table__col table__col_date">16 дек 2022</div>
+                                        <div class="col-4 table__col">Двенадцатое первенство по лыжным гонкам «Даниловская
+                                            лыжня - 2022»</div>
+                                        <div class="col-3 table__col">Юниоры 2000 – 2001</div>
+                                        <div class="col-1 table__col">10 км</div>
+                                        <div class="col-1 table__col table__col_right">9:54</div>
+                                        <div class="col-2 table__col table__col_center">
+                                            <span class="statistic__medal statistic__medal_bronze">3</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab tab__participate participate tab-2">
+                        <h2 class="participate__title">Я участвую</h2>
+                        <div class="competition__container">
+                            <div class="competition__info">
+                                <div class="competition__photo">
+                                    <svg width="100" height="100">
+                                        <use xlink:href="<?=SITE_TEMPLATE_PATH?>/assets/img/sprite.svg#icon-ski"></use>
+                                    </svg>
+                                </div>
+                                <div class="competition__descr">
+                                    <div>
+                                        <h3 class="competition__title">Двенадцатое первенство по лыжным гонкам
+                                            «Даниловская
+                                            лыжня - 2022»</h3>
+                                        <p class="competition__place">Еврейская АО, Смидовичский р-н, село Даниловка
+                                            (624 км)
+                                        </p>
+                                    </div>
+                                    <p class="competition__subject">Первенство по лыжным гонкам среди всех возрастов</p>
+                                </div>
+                            </div>
+                            <aside class="competition__aside">
+                                <h4 class="competition__date">16 – 24 мар, 2022</h4>
+                                <p class="competition__to">Через 12 дней</p>
+                                <h4 class="competition__status">Зарегистрирован</h4>
+                                <p class="competition__pay competition__pay_cabinet">Участие бесплатно</p>
+                                <div class="competition__review-wrapper">
+                                    <div class="competition__review">
+                                        <div class="competition__avatar-block">
+                                            <img class="competition__avatar"
+                                                src="<?=SITE_TEMPLATE_PATH?>/assets/img/avatar.webp" width="32"
+                                                height="32" alt="Аватар">
+
+                                            <!-- Если нет аватарки -->
+                                            <!-- <div class="competition__initials">
+                                                <svg viewBox="0 0 40 40" width="36" height="36">
+                                                    <text class="competition__initials-text" x="50%" y="26" height="20" text-anchor="middle">
+                                                        КА
+                                                    </text>
+                                                </svg>
+                                            </div> -->
+                                        </div>
+                                        <div class="competition__avatar-block competition__avatar-block_second">
+                                            <img class="competition__avatar"
+                                                src="<?=SITE_TEMPLATE_PATH?>/assets/img/avatar-1.webp" width="32"
+                                                height="32" alt="Аватар">
+                                        </div>
+                                        <div class="competition__avatar-block competition__avatar-block_third">
+                                            <img class="competition__avatar"
+                                                src="<?=SITE_TEMPLATE_PATH?>/assets/img/avatar-2.webp" width="32"
+                                                height="32" alt="Аватар">
+                                        </div>
+                                    </div>
+                                    <span class="competition__amount"> 1 422</span>
+                                </div>
+                            </aside>
+                        </div>
+
+                        <h4 class="participate__finished">Завершенные соревнования</h4>
+
+                        <div class="competition__container">
+                            <div class="competition__info">
+                                <div class="competition__photo">
+                                    <svg width="100" height="100">
+                                        <use xlink:href="<?=SITE_TEMPLATE_PATH?>/assets/img/sprite.svg#icon-ski"></use>
+                                    </svg>
+                                </div>
+                                <div class="competition__descr">
+                                    <div>
+                                        <h3 class="competition__title">Гонка на выживание</h3>
+                                        <p class="competition__place">Еврейская АО, Смидовичский р-н, село Даниловка
+                                            (624 км)
+                                        </p>
+                                    </div>
+                                    <p class="competition__subject">Первенство по лыжным гонкам среди всех возрастов</p>
+                                </div>
+                            </div>
+                            <aside class="competition__aside competition__aside_cabinet">
+                                <h4 class="competition__date">16 – 24 мар, 2022</h4>
+                                <h4 class="competition__result">24 место</h4>
+                                <div class="competition__review-wrapper">
+                                    <div class="competition__review">
+                                        <div class="competition__avatar-block">
+                                            <img class="competition__avatar"
+                                                src="<?=SITE_TEMPLATE_PATH?>/assets/img/avatar.webp" width="32"
+                                                height="32" alt="Аватар">
+                                        </div>
+                                        <div class="competition__avatar-block competition__avatar-block_second">
+                                            <img class="competition__avatar"
+                                                src="<?=SITE_TEMPLATE_PATH?>/assets/img/avatar-1.webp" width="32"
+                                                height="32" alt="Аватар">
+                                        </div>
+                                        <div class="competition__avatar-block competition__avatar-block_third">
+                                            <img class="competition__avatar"
+                                                src="<?=SITE_TEMPLATE_PATH?>/assets/img/avatar-2.webp" width="32"
+                                                height="32" alt="Аватар">
+                                        </div>
+                                    </div>
+                                    <span class="competition__amount"> 1 422</span>
+                                </div>
+                            </aside>
+                        </div>
+
+                        <div class="competition__container">
+                            <div class="competition__info">
+                                <div class="competition__photo">
+                                    <svg width="100" height="100">
+                                        <use xlink:href="<?=SITE_TEMPLATE_PATH?>/assets/img/sprite.svg#icon-ski"></use>
+                                    </svg>
+                                </div>
+                                <div class="competition__descr">
+                                    <div>
+                                        <h3 class="competition__title">Гонка на выживание</h3>
+                                        <p class="competition__place">Еврейская АО, Смидовичский р-н, село Даниловка
+                                            (624 км)
+                                        </p>
+                                    </div>
+                                    <p class="competition__subject">Первенство по лыжным гонкам среди всех возрастов</p>
+                                </div>
+                            </div>
+                            <aside class="competition__aside competition__aside_cabinet">
+                                <h4 class="competition__date">16 – 24 мар, 2022</h4>
+                                <svg width="51" height="52" class="competition__medal">
+                                    <use xlink:href="<?=SITE_TEMPLATE_PATH?>/assets/img/sprite.svg#icon-first"></use>
+                                </svg>
+                                <div class="competition__review-wrapper">
+                                    <div class="competition__review">
+                                        <div class="competition__avatar-block">
+                                            <img class="competition__avatar"
+                                                src="<?=SITE_TEMPLATE_PATH?>/assets/img/avatar.webp" width="32"
+                                                height="32" alt="Аватар">
+                                        </div>
+                                        <div class="competition__avatar-block competition__avatar-block_second">
+                                            <img class="competition__avatar"
+                                                src="<?=SITE_TEMPLATE_PATH?>/assets/img/avatar-1.webp" width="32"
+                                                height="32" alt="Аватар">
+                                        </div>
+                                        <div class="competition__avatar-block competition__avatar-block_third">
+                                            <img class="competition__avatar"
+                                                src="<?=SITE_TEMPLATE_PATH?>/assets/img/avatar-2.webp" width="32"
+                                                height="32" alt="Аватар">
+                                        </div>
+                                    </div>
+                                    <span class="competition__amount"> 1 422</span>
+                                </div>
+                            </aside>
+                        </div>
+
+                        <div class="competition__container">
+                            <div class="competition__info">
+                                <div class="competition__photo">
+                                    <svg width="100" height="100">
+                                        <use xlink:href="<?=SITE_TEMPLATE_PATH?>/assets/img/sprite.svg#icon-ski"></use>
+                                    </svg>
+                                </div>
+                                <div class="competition__descr">
+                                    <div>
+                                        <h3 class="competition__title">Гонка на выживание</h3>
+                                        <p class="competition__place">Еврейская АО, Смидовичский р-н, село Даниловка
+                                            (624 км)
+                                        </p>
+                                    </div>
+                                    <p class="competition__subject">Первенство по лыжным гонкам среди всех возрастов</p>
+                                </div>
+                            </div>
+                            <aside class="competition__aside competition__aside_cabinet">
+                                <h4 class="competition__date">16 – 24 мар, 2022</h4>
+                                <h4 class="competition__result">Нет результатов</h4>
+                                <div class="competition__review-wrapper">
+                                    <div class="competition__review">
+                                        <div class="competition__avatar-block">
+                                            <img class="competition__avatar"
+                                                src="<?=SITE_TEMPLATE_PATH?>/assets/img/avatar.webp" width="32"
+                                                height="32" alt="Аватар">
+                                        </div>
+                                        <div class="competition__avatar-block competition__avatar-block_second">
+                                            <img class="competition__avatar"
+                                                src="<?=SITE_TEMPLATE_PATH?>/assets/img/avatar-1.webp" width="32"
+                                                height="32" alt="Аватар">
+                                        </div>
+                                        <div class="competition__avatar-block competition__avatar-block_third">
+                                            <img class="competition__avatar"
+                                                src="<?=SITE_TEMPLATE_PATH?>/assets/img/avatar-2.webp" width="32"
+                                                height="32" alt="Аватар">
+                                        </div>
+                                    </div>
+                                    <span class="competition__amount"> 1 422</span>
+                                </div>
+                            </aside>
+                        </div>
+                    </div>
+
+                    <div class="tab tab__organize organize tab-3">
+                        <div class="tab__content">
+                            <div class="organize__header">
+                                <h2 class="organize__title">Я организую</h2>
+                                <a class="button-primary button-primary_with-icon organize__btn">
+                                    <svg width="24" height="24" class="organize__add-icon">
+                                        <use
+                                            xlink:href="<?=SITE_TEMPLATE_PATH?>/assets/img/sprite.svg#icon-plus-circle">
+                                        </use>
+                                    </svg>
+                                    Добавить соревнование
+                                </a>
+                            </div>
+
+                            <div class="organize__toggle">
+                                <div class="statistic__toggle-item is-active">
+                                    Опубликованы
+                                </div>
+
+                                <div class="statistic__toggle-item">
+                                    Черновики
+                                </div>
+                            </div>
+
+                            <div class="competition__container competition__container_organize">
+                                <div class="competition__wrapper">
+                                    <div class="competition__info">
+                                        <div class="competition__photo">
+                                            <svg width="100" height="100">
+                                                <use
+                                                    xlink:href="<?=SITE_TEMPLATE_PATH?>/assets/img/sprite.svg#icon-ski">
+                                                </use>
+                                            </svg>
+                                        </div>
+                                        <div class="competition__descr">
+                                            <div>
+                                                <h3 class="competition__title">Двенадцатое первенство по лыжным гонкам
+                                                    «Даниловская
+                                                    лыжня - 2022»</h3>
+                                                <p class="competition__place">Еврейская АО, Смидовичский р-н, село
+                                                    Даниловка (624 км)
+                                                </p>
+                                            </div>
+                                            <p class="competition__subject">Первенство по лыжным гонкам среди всех
+                                                возрастов</p>
+                                        </div>
+                                    </div>
+                                    <aside class="competition__aside">
+                                        <h4 class="competition__date">16 – 24 мар, 2022</h4>
+                                        <p class="competition__to">Через 12 дней</p>
+                                        <h4 class="competition__status">Идет регистрация</h4>
+                                        <p class="competition__pay competition__pay_cabinet">Участие бесплатно</p>
+                                        <div class="competition__review-wrapper">
+                                            <div class="competition__review">
+                                                <div class="competition__avatar-block">
+                                                    <img class="competition__avatar"
+                                                        src="<?=SITE_TEMPLATE_PATH?>/assets/img/avatar.webp" width="32"
+                                                        height="32" alt="Аватар">
+                                                </div>
+                                                <div class="competition__avatar-block competition__avatar-block_second">
+                                                    <img class="competition__avatar"
+                                                        src="<?=SITE_TEMPLATE_PATH?>/assets/img/avatar-1.webp"
+                                                        width="32" height="32" alt="Аватар">
+                                                </div>
+                                                <div class="competition__avatar-block competition__avatar-block_third">
+                                                    <img class="competition__avatar"
+                                                        src="<?=SITE_TEMPLATE_PATH?>/assets/img/avatar-2.webp"
+                                                        width="32" height="32" alt="Аватар">
+                                                </div>
+                                            </div>
+                                            <span class="competition__amount"> 1 422</span>
+                                        </div>
+                                    </aside>
+                                </div>
+                                <div class="competition__footer">
+                                    <div class="competition__footer-actions">
+                                        <a class="button-primary button-primary_with-icon organize__btn"
+                                            href="./edit.html">
+                                            <svg width="24" height="24"
+                                                class="organize__btn-icon organize__btn-icon_primary">
+                                                <use
+                                                    xlink:href="<?=SITE_TEMPLATE_PATH?>/assets/img/sprite.svg#icon-edit">
+                                                </use>
+                                            </svg>
+                                            Редактировать
+                                        </a>
+                                        <a class="button-secondary button-secondary_with-icon organize__btn" href="#">
+                                            <svg width="24" height="24" class="organize__btn-icon">
+                                                <use
+                                                    xlink:href="<?=SITE_TEMPLATE_PATH?>/assets/img/sprite.svg#icon-copy">
+                                                </use>
+                                            </svg>
+                                            Создать копию</a>
+                                    </div>
+                                    <a class="button-secondary" href="#">Отменить соревнование</a>
+                                </div>
+                            </div>
+
+                            <div class="competition__container competition__container_organize">
+                                <div class="competition__wrapper">
+                                    <div class="competition__info">
+                                        <div class="competition__photo">
+                                            <svg width="100" height="100">
+                                                <use
+                                                    xlink:href="<?=SITE_TEMPLATE_PATH?>/assets/img/sprite.svg#icon-ski">
+                                                </use>
+                                            </svg>
+                                        </div>
+                                        <div class="competition__descr">
+                                            <div>
+                                                <h3 class="competition__title">Двенадцатое первенство по лыжным гонкам
+                                                    «Даниловская
+                                                    лыжня - 2022»</h3>
+                                                <p class="competition__place">Еврейская АО, Смидовичский р-н, село
+                                                    Даниловка (624 км)
+                                                </p>
+                                            </div>
+                                            <p class="competition__subject">Первенство по лыжным гонкам среди всех
+                                                возрастов</p>
+                                        </div>
+                                    </div>
+                                    <aside class="competition__aside competition__aside_cabinet">
+                                        <h4 class="competition__date">16 – 24 мар, 2022</h4>
+
+                                        <p class="competition__status competition__status_finished">Завершены</p>
+
+                                        <div class="competition__review-wrapper">
+                                            <div class="competition__review">
+                                                <div class="competition__avatar-block">
+                                                    <img class="competition__avatar"
+                                                        src="<?=SITE_TEMPLATE_PATH?>/assets/img/avatar.webp" width="32"
+                                                        height="32" alt="Аватар">
+                                                </div>
+                                                <div class="competition__avatar-block competition__avatar-block_second">
+                                                    <img class="competition__avatar"
+                                                        src="<?=SITE_TEMPLATE_PATH?>/assets/img/avatar-1.webp"
+                                                        width="32" height="32" alt="Аватар">
+                                                </div>
+                                                <div class="competition__avatar-block competition__avatar-block_third">
+                                                    <img class="competition__avatar"
+                                                        src="<?=SITE_TEMPLATE_PATH?>/assets/img/avatar-2.webp"
+                                                        width="32" height="32" alt="Аватар">
+                                                </div>
+                                            </div>
+                                            <span class="competition__amount"> 1 422</span>
+                                        </div>
+                                    </aside>
+                                </div>
+                                <div class="competition__footer">
+                                    <div class="competition__footer-actions">
+                                        <a class="button-primary button-primary_with-icon organize__btn"
+                                            href="./add-results.html">
+                                            <svg width="24" height="24"
+                                                class="organize__btn-icon organize__btn-icon_primary">
+                                                <use
+                                                    xlink:href="<?=SITE_TEMPLATE_PATH?>/assets/img/sprite.svg#icon-plus-circle">
+                                                </use>
+                                            </svg>
+                                            Добавить результаты
+                                        </a>
+                                        <a class="button-secondary button-secondary_with-icon organize__btn"
+                                            href="./add-content.html">
+                                            <svg width="24" height="24" class="organize__btn-icon">
+                                                <use
+                                                    xlink:href="<?=SITE_TEMPLATE_PATH?>/assets/img/sprite.svg#icon-image">
+                                                </use>
+                                            </svg>
+                                            Добавить контент</a>
+                                        <a class="button-secondary button-secondary_with-icon organize__btn" href="#">
+                                            <svg width="24" height="24" class="organize__btn-icon">
+                                                <use
+                                                    xlink:href="<?=SITE_TEMPLATE_PATH?>/assets/img/sprite.svg#icon-copy">
+                                                </use>
+                                            </svg>
+                                            Создать копию</a>
+                                    </div>
+                                    <a class="button-secondary" href="#">Отменить соревнование</a>
+                                </div>
+                            </div>
+
+                            <div class="competition__container competition__container_organize">
+                                <div class="competition__wrapper">
+                                    <div class="competition__info">
+                                        <div class="competition__photo">
+                                            <svg width="100" height="100">
+                                                <use
+                                                    xlink:href="<?=SITE_TEMPLATE_PATH?>/assets/img/sprite.svg#icon-ski">
+                                                </use>
+                                            </svg>
+                                        </div>
+                                        <div class="competition__descr">
+                                            <div>
+                                                <h3 class="competition__title">Двенадцатое первенство по лыжным гонкам
+                                                    «Даниловская
+                                                    лыжня - 2022»</h3>
+                                                <p class="competition__place">Еврейская АО, Смидовичский р-н, село
+                                                    Даниловка (624 км)
+                                                </p>
+                                            </div>
+                                            <p class="competition__subject">Первенство по лыжным гонкам среди всех
+                                                возрастов</p>
+                                        </div>
+                                    </div>
+                                    <aside class="competition__aside competition__aside_cabinet">
+                                        <h4 class="competition__date">16 – 24 мар, 2022</h4>
+
+                                        <p class="competition__status competition__status_finished">Завершены</p>
+
+                                        <div class="results__actions results__actions_organize">
+                                            <a class="results__icon-block" href="#">
+                                                <svg width="24" height="24">
+                                                    <use
+                                                        xlink:href="<?=SITE_TEMPLATE_PATH?>/assets/img/sprite.svg#icon-protocol">
+                                                    </use>
+                                                </svg>
+                                            </a>
+
+                                            <a class="results__icon-block" href="#">
+                                                <svg width="24" height="24">
+                                                    <use
+                                                        xlink:href="<?=SITE_TEMPLATE_PATH?>/assets/img/sprite.svg#icon-image">
+                                                    </use>
+                                                </svg>
+                                            </a>
+                                        </div>
+
+                                        <div class="competition__review-wrapper">
+                                            <div class="competition__review">
+                                                <div class="competition__avatar-block">
+                                                    <img class="competition__avatar"
+                                                        src="<?=SITE_TEMPLATE_PATH?>/assets/img/avatar.webp" width="32"
+                                                        height="32" alt="Аватар">
+                                                </div>
+                                                <div class="competition__avatar-block competition__avatar-block_second">
+                                                    <img class="competition__avatar"
+                                                        src="<?=SITE_TEMPLATE_PATH?>/assets/img/avatar-1.webp"
+                                                        width="32" height="32" alt="Аватар">
+                                                </div>
+                                                <div class="competition__avatar-block competition__avatar-block_third">
+                                                    <img class="competition__avatar"
+                                                        src="<?=SITE_TEMPLATE_PATH?>/assets/img/avatar-2.webp"
+                                                        width="32" height="32" alt="Аватар">
+                                                </div>
+                                            </div>
+                                            <span class="competition__amount"> 1 422</span>
+                                        </div>
+                                    </aside>
+                                </div>
+                                <div class="competition__footer">
+                                    <div class="competition__footer-actions">
+                                        <a class="button-secondary button-secondary_with-icon organize__btn" href="#">
+                                            <svg width="24" height="24" class="organize__btn-icon">
+                                                <use
+                                                    xlink:href="<?=SITE_TEMPLATE_PATH?>/assets/img/sprite.svg#icon-image">
+                                                </use>
+                                            </svg>
+                                            Добавить контент</a>
+                                        <a class="button-secondary button-secondary_with-icon organize__btn" href="#">
+                                            <svg width="24" height="24" class="organize__btn-icon">
+                                                <use
+                                                    xlink:href="<?=SITE_TEMPLATE_PATH?>/assets/img/sprite.svg#icon-copy">
+                                                </use>
+                                            </svg>
+                                            Создать копию</a>
+                                    </div>
+                                    <a class="button-secondary" href="#">Отменить соревнование</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab tab__organize organize tab-5">
+                        <div class="tab__content settings">
+                            <h2 class="organize__title settings__header">Настройки</h2>
+                            <div class="settings__info-block col-8 table__col_full">
+                                <div class="row">
+                                    <h4 class="settings__title">Персональные данные</h4>
+
+                                    <div class="form__row">
+                                        <label for="last-name">Фамилия*</label>
+                                        <input type="text" id="last-name">
+                                    </div>
+
+                                    <div class="form__row">
+                                        <label for="name">Имя*</label>
+                                        <input type="text" id="name">
+                                    </div>
+
+                                    <div class="form__row">
+                                        <label for="second-name">Отчество*</label>
+                                        <input type="text" id="second-name">
+                                    </div>
+
+                                    <div class="col-6 table__col_full">
+                                        <div class="form__row">
+                                            <label for="email">Адрес электронной почты*</label>
+                                            <input type="email" id="email">
+                                        </div>
+                                    </div>
+                                    <div class="col-6 table__col_full">
+                                        <div class="form__row">
+                                            <label for="phone">Номер телефона</label>
+                                            <input type="tel" id="phone">
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-5 table__col_full">
+                                        <div class="form__row">
+                                            <label for="date">Дата рождения</label>
+                                            <input type="date" id="date" class="form__datapicker">
+                                        </div>
+                                    </div>                                  
+                                </div>
+                            </div>
+                            <div class="settings__info-block settings__info-block_line col-8 table__col_full">
+                                <h4 class="settings__title">Карточка спортсмена</h4>
+                                <div class="row settings__row">
+
+                                    <div class="col-6 table__col_full settings__type">
+                                        <div class="form__row">
+                                            <label for="type">Вид спорта</label>
+                                            <select>
+                                                <option value="">Лыжи</option>
+                                                <option value="">Биатлон</option>
+                                                <option value="">Лыжи</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-5 table__col_full settings__type">
+                                        <div class="settings__col">
+                                            <div class="form__row settings__rank">
+                                                <label for="rank">Разряд</label>
+                                                <select>
+                                                    <option value="">1 взрослый</option>
+                                                    <option value="">1 взрослый</option>
+                                                    <option value="">1 взрослый</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button type="button" class="col-1 settings__btn-trash">
+                                        <svg width="24" height="24">
+                                            <use xlink:href="<?=SITE_TEMPLATE_PATH?>/assets/img/sprite.svg#icon-trash"></use>
+                                        </svg>
+                                    </button>
+                                </div>
+                                <div class="row settings__row">
+                                    <div class="col-6 table__col_full settings__type">
+                                        <div class="form__row">
+                                            <label for="type">Вид спорта</label>
+                                            <select>
+                                                <option value="">Биатлон</option>
+                                                <option value="">Лыжи</option>
+                                                <option value="">Биатлон</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-5 table__col_full settings__type">
+                                        <div class="settings__col">
+                                            <div class="form__row settings__rank">
+                                                <label for="rank">Разряд</label>
+                                                <select>
+                                                    <option value="">КМС</option>
+                                                    <option value="">КМС</option>
+                                                    <option value="">КМС</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button type="button" class="col-1 settings__btn-trash">
+                                        <svg width="24" height="24">
+                                            <use xlink:href="<?=SITE_TEMPLATE_PATH?>/assets/img/sprite.svg#icon-trash"></use>
+                                        </svg>
+                                    </button>
+                                </div>
+                                <button class="settings__add-row settings__add-row_cart new__btn-add" type="button">
+                                    <svg width="24" height="24" class="new__btn-add-icon">
+                                        <use xlink:href="<?=SITE_TEMPLATE_PATH?>/assets/img/sprite.svg#icon-plus-circle"></use>
+                                    </svg>
+                                    Добавить еще
+                                </button>                     
+                            </div>
+                            <div class="settings__info-block settings__info-block_line col-8 table__col_full">
+                                <div class="row">
+                                    <h4 class="settings__title">Пароль</h4>
+
+                                    <div class="col-6 table__col_full">
+                                        <div class="form__row">
+                                            <label for="password">Пароль</label>
+                                            <input type="password" id="password" class="form__password">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-6 table__col_full">
+                                        <div class="form__row">
+                                            <label for="repeat-password">Повторие пароль</label>
+                                            <input type="password" id="repeat-password" class="form__password">
+                                        </div>
+                                    </div>
+                                        
+                                    <div class="col-3 table__col_full">
+                                        <div class="settings__button-block">
+                                            <button type="button" class="button-secondary button-secondary_with-icon">
+                                                <svg width="24" height="24" class="organize__btn-icon">
+                                                    <use xlink:href="<?=SITE_TEMPLATE_PATH?>/assets/img/sprite.svg#icon-edit"></use>
+                                                </svg>Изменить
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="settings__info-block settings__info-block_line col-8 table__col_full">
+                                <div class="row">
+                                    <h4 class="settings__title">Карточка огранизатора</h4>
+
+                                    <div class="form__row">
+                                        <label for="name">Как к вам обращатья</label>
+                                        <input type="text" id="name">
+                                    </div>
+
+                                    <div class="col-6 table__col_full">
+                                        <div class="form__row">
+                                            <label for="phone">Номер телефона</label>
+                                            <input type="tel" id="phone">
+                                        </div>
+                                    </div>
+                                    <div class="col-6 table__col_full">
+                                        <div class="form__row">
+                                            <label for="email">Адрес электронной почты*</label>
+                                            <input type="email" id="email">
+                                        </div>
+                                    </div>
+
+                                    <div class="form__row">
+                                        <label for="whatsapp">Whatsapp</label>
+                                        <input type="text" id="whatsapp">
+                                    </div>
+
+                                </div>
+                                <button class="settings__add-row settings__add-row_cart new__btn-add" type="button">
+                                    <svg width="24" height="24" class="new__btn-add-icon">
+                                        <use xlink:href="<?=SITE_TEMPLATE_PATH?>/assets/img/sprite.svg#icon-plus-circle"></use>
+                                    </svg>
+                                    Добавить еще
+                                </button> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    @@INC:(block/footer/auth.html)
+    <script src="<?=SITE_TEMPLATE_PATH?>/assets/js/script.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

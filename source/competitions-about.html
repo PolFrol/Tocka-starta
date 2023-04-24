@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <title>Точка старта</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="<?=SITE_TEMPLATE_PATH?>/assets/css/style.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <header class="header container">
+        <div class="header__wrapper">
+            @@INC:(block/header__nav/default.html)
+        </div>
+
+        <div class="header__about about-header">
+
+            <a class="about-header__back" href="./competitions.html">
+                <div class="about-header__button-back">
+                    <svg width="24" height="24">
+                        <use xlink:href="<?=SITE_TEMPLATE_PATH?>/assets/img/sprite.svg#icon-arrow-left"></use>
+                    </svg>
+                </div>
+                <p>Назад</p>
+            </a>
+            <h2 class="about-header__title">Двенадцатое первенство по лыжным гонкам «Даниловская лыжня - 2022»</h2>
+
+            <div class="about-header__row row">
+                <div class="col-3 about-header__col">
+                    <p class="about-header__text">Дата/время проведения</p>
+                    <p class="about-header__desrc">16 – 24 мар, 2022, 10:00 18:00</p>
+                    <p class="about-header__add-info about-header__add-info_when">Через 12 дней</p>
+                </div>
+
+                <div class="col-3 about-header__col">
+                    <p class="about-header__text">Место проведения</p>
+                    <p class="about-header__desrc">Еврейская АО, Смидовичский р-н, село Даниловка<span
+                            class="about-header__add-info about-header__add-info_where">624 км</span></p>
+                </div>
+
+                <div class="col-3 about-header__col">
+                    <p class="about-header__text">Спорт/дисциплина</p>
+                    <p class="about-header__desrc">Лыжи, марафон</p>
+                </div>
+
+                <div class="col-3 about-header__col">
+                    <p class="about-header__text">Участники</p>
+                    <div class="competition__review">
+                        <div class="competition__avatar-block">
+                            <img class="competition__avatar" src="<?=SITE_TEMPLATE_PATH?>/assets/img/avatar.webp"
+                                width="32" height="32" alt="Аватар">
+                        </div>
+                        <div class="competition__avatar-block competition__avatar-block_second">
+                            <img class="competition__avatar" src="<?=SITE_TEMPLATE_PATH?>/assets/img/avatar-1.webp"
+                                width="32" height="32" alt="Аватар">
+                        </div>
+                        <div class="competition__avatar-block competition__avatar-block_third">
+                            <img class="competition__avatar" src="<?=SITE_TEMPLATE_PATH?>/assets/img/avatar-2.webp"
+                                width="32" height="32" alt="Аватар">
+                        </div>
+                    </div>
+                    <span class="about-header__amount"> 1 422 из 2 000</span>
+                </div>
+            </div>
+
+            <div class="about-header__register">
+                <a class="button-primary button-primary__full" href="./registration-on-competition.html">Регистрация</a>
+                <p class="about-header__add-info about-header__add-info_untill">До 15 марта</p>
+                <p class="about-header__add-info about-header__add-info_free">Участие бесплатно</p>
+            </div>
+        </div>
+    </header>
+
+    </header>
+
+    <main>
+        <div class="tabs">
+            <ul class="tabs__nav tabs-nav container">
+                <li class="tabs-nav__item is-active" data-tab-name="tab-1">О соревновании</li>
+                <li class="tabs-nav__item" data-tab-name="tab-2">Участники</li>
+                <li class="tabs-nav__item" data-tab-name="tab-3">Результаты</li>
+                <li class="tabs-nav__item" data-tab-name="tab-4">Фото и видео</li>
+            </ul>
+            <div class="tabs__content">
+                <div class="container">
+                    <div class="tab is-active tab_about tab-1">
+                        <div class="tab__content">
+                            <h2>О соревновании</h2>
+                            <p class="tab__text">Приглашаем все лыжние секции области, а также любителй на ежегодное
+                                первенство по лыжным гонкам «Даниловская лыжня – 2022» . Сбалансированное мероприятие на
+                                базе села Даниловка. Гостиницы работают</p>
+                            <h3 class="tab__table-title">Участвующие группы</h3>
+
+                            <div class="table__wrapper-adaptive">
+                                <div class="tab__table tab__table_group table">
+                                    <div class="table__header row">
+                                        <span class="col-5 table__header-title">Группа</span>
+                                        <span class="col-5 table__header-title">Год</span>
+                                        <span class="col-2 table__header-title">Пол</span>
+                                    </div>
+                                    <div class="table__row row">
+                                        <div class="col-1">Ж10</div>
+                                        <div class="col-4">Девочки</div>
+                                        <div class="col-5">2012 - 2013</div>
+                                        <div class="col-2">Жен</div>
+                                    </div>
+                                    <div class="table__row row">
+                                        <div class="col-1">Ж10</div>
+                                        <div class="col-4">Девочки</div>
+                                        <div class="col-5">2012 - 2013</div>
+                                        <div class="col-2">Жен</div>
+                                    </div>
+                                    <div class="table__row row">
+                                        <div class="col-1">Ж10</div>
+                                        <div class="col-4">Девочки</div>
+                                        <div class="col-5">2012 - 2013</div>
+                                        <div class="col-2">Жен</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h3 class="tab__table-title">Программа мероприятий</h3>
+                            <div class="table">
+                                <div class="table__row table__row_without-header row">
+                                    <div class="col-3 table__col table__col_full">27.02.2022 Вс</div>
+                                    <div class="col-3 table__col table__col_full table__time">10:00 - 11:30</div>
+                                    <div class="col-6 table__col table__col_full">Работа комиссии по допуску</div>
+                                </div>
+                                <div class="table__row table__row_without-header row">
+                                    <div class="col-3 table__col table__col_full">27.02.2022 Вс</div>
+                                    <div class="col-3 table__col table__col_full table__time">10:00 - 11:30</div>
+                                    <div class="col-6 table__col table__col_full">Награждение победителей и призёров, закрытие соревнований</div>
+                                </div>
+                            </div>
+
+                            <h3 class="tab__map-title">Как добраться</h3>
+                            <iframe class="tab__map-block"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31385.59281281039!2d29.560344940531106!3d60.55082228820919!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46963470a4ec99eb%3A0x6939a490348946f1!2z0LHQsNC30LAg0L7RgtC00YvRhdCwINCa0L7RgiDQnNCw0YLRgNC-0YHQutC40L0!5e0!3m2!1sru!2sge!4v1659798029765!5m2!1sru!2sge"
+                                width="100%" height="300" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                        <aside class="organize__aside">
+                            <h4>Организатор</h4>
+                            <div class="organize__info">
+                                <div class="organize__data">
+                                    <img class="organize__avatar" src="<?=SITE_TEMPLATE_PATH?>/assets/img/avatar-2.webp"
+                                        width="44" height="44" alt="Аватар">
+                                    <div>
+                                        <p class="organize__name">Иванова Анна</p>
+                                        <h4>+7 950 64 66 378</h4>
+                                    </div>
+                                </div>
+                                <div class="organize__actions">
+                                    <a href="#"
+                                        class="button-secondary button-secondary_with-icon organize__btn-message">
+                                        <svg width="24" height="24" class="organize__btn-icon">
+                                            <use
+                                                xlink:href="<?=SITE_TEMPLATE_PATH?>/assets/img/sprite.svg#icon-message-square">
+                                            </use>
+                                        </svg>
+                                        Написать</a>
+                                    <a class="cabinet-info__actions-block" href="#">
+                                        <svg width="24" height="24">
+                                            <use
+                                                xlink:href="<?=SITE_TEMPLATE_PATH?>/assets/img/sprite.svg#icon-vk-cabinet">
+                                            </use>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                            <picture>
+                                <source media="(max-width: 1023px)" srcset="<?=SITE_TEMPLATE_PATH?>/assets/img/place-adaptive.webp">
+                                <img class="organize__place" src="<?=SITE_TEMPLATE_PATH?>/assets/img/place.webp" width="357"
+                                    height="255" alt="Место">
+                            </picture>
+                            <p class="organize__place-decr">Лыжная база, село Даниловка</p>
+
+                            <h4>Предложения партнеров</h4>
+
+                            <a class="organize__partner organize__partner_first" href="#">
+                                <div>
+                                    <p class="organize__offer">Подготовка лыж</p>
+                                    <h4>от 350 ₽</h4>
+                                </div>
+
+                                <svg width="24" height="24">
+                                    <use xlink:href="<?=SITE_TEMPLATE_PATH?>/assets/img/sprite.svg#icon-arrow-right">
+                                    </use>
+                                </svg>
+                            </a>
+
+                            <a class="organize__partner" href="#">
+                                <div>
+                                    <p class="organize__offer">Подготовка лыж</p>
+                                    <h4>от 350 ₽</h4>
+                                </div>
+
+                                <svg width="24" height="24">
+                                    <use xlink:href="<?=SITE_TEMPLATE_PATH?>/assets/img/sprite.svg#icon-arrow-right">
+                                    </use>
+                                </svg>
+                            </a>
+                        </aside>
+                    </div>
+
+                    <div class="tab tab-2">
+                        <div class="participate__header participate__title">
+                            <h2>Участники</h2>
+                            <select class="participate__select">
+                                <option value="" selected>Выбрать</option>
+                                <option value="">example 2</option>
+                                <option value="">example 3</option>
+                            </select>
+                        </div>
+                        <div class="participate__header participate__header_amount">
+                            <h3>Девочки, Ж10, 2012-2013</h3>
+                            <span class="participate__amount">5</span>
+                        </div>
+
+                        <div class="table__wrapper-adaptive">
+                            <div class="participate__table">
+                                <div class="table__header row">
+                                    <div class="col-1 table__header-title">№</div>
+                                    <div class="col-4 table__header-title">Участник</div>
+                                    <div class="col-2 table__header-title">Команда</div>
+                                    <div class="col-2 table__header-title">Год</div>
+                                    <div class="col-3 table__header-title">Разряд</div>
+                                </div>
+    
+                                <div class="table__row row">
+                                    <div class="col-1">1</div>
+                                    <div class="col-4 participate__name">
+                                        <img class="participate__avatar"
+                                            src="<?=SITE_TEMPLATE_PATH?>/assets/img/avatar.webp" width="32" height="32"
+                                            alt="Аватар">
+                                        <span>Сальникова Виктория</span>
+                                    </div>
+                                    <div class="col-2">Спутник</div>
+                                    <div class="col-2">2012</div>
+                                    <div class="col-3">2 взр.</div>
+                                </div>
+                                <div class="table__row row">
+                                    <div class="col-1">2</div>
+                                    <div class="col-4 participate__name">
+                                        <div class="participate__avatar-block">
+                                            <svg width="24" height="24">
+                                                <use xlink:href="<?=SITE_TEMPLATE_PATH?>/assets/img/sprite.svg#icon-women">
+                                                </use>
+                                            </svg>
+                                        </div>
+                                        <span>Кузнецова Василиса</span>
+                                    </div>
+                                    <div class="col-2">Спутник</div>
+                                    <div class="col-2">2012</div>
+                                    <div class="col-3">2 взр.</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="participate__header participate__header_amount">
+                            <h3>Девочки, Ж12, 2011-2010</h3>
+                            <span class="participate__amount">5</span>
+                        </div>
+                        <div class="table__wrapper-adaptive">
+                            <div class="participate__table">
+                                <div class="table__header row">
+                                    <div class="col-1 table__header-title">№</div>
+                                    <div class="col-4 table__header-title">Участник</div>
+                                    <div class="col-2 table__header-title">Команда</div>
+                                    <div class="col-2 table__header-title">Год</div>
+                                    <div class="col-3 table__header-title">Разряд</div>
+                                </div>
+    
+                                <div class="table__row row">
+                                    <div class="col-1">1</div>
+                                    <div class="col-4 participate__name">
+                                        <img class="participate__avatar"
+                                            src="<?=SITE_TEMPLATE_PATH?>/assets/img/avatar.webp" width="32" height="32"
+                                            alt="Аватар">
+                                        <span>Сальникова Виктория</span>
+                                    </div>
+                                    <div class="col-2">Спутник</div>
+                                    <div class="col-2">2012</div>
+                                    <div class="col-3">2 взр.</div>
+                                </div>
+                                <div class="table__row row">
+                                    <div class="col-1">2</div>
+                                    <div class="col-4 participate__name">
+                                        <div class="participate__avatar-block">
+                                            <svg width="24" height="24">
+                                                <use xlink:href="<?=SITE_TEMPLATE_PATH?>/assets/img/sprite.svg#icon-women">
+                                                </use>
+                                            </svg>
+                                        </div>
+                                        <span>Кузнецова Василиса</span>
+                                    </div>
+                                    <div class="col-2">Спутник</div>
+                                    <div class="col-2">2012</div>
+                                    <div class="col-3">2 взр.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab tab-3">
+                        <div class="results__header">
+                            <div class="participate__header">
+                                <h2>Результаты</h2>
+                                <select class="participate__select">
+                                    <option value="" selected>Все группы</option>
+                                    <option value="">example 2</option>
+                                    <option value="">example 3</option>
+                                </select>
+                            </div>
+
+                            <div class="participate__header participate__download-wrapper">
+                                <div class="participate__download participate__download_whole">
+                                    <svg width="24" height="24">
+                                        <use xlink:href="<?=SITE_TEMPLATE_PATH?>/assets/img/sprite.svg#icon-download">
+                                        </use>
+                                    </svg>
+                                </div>
+                                <p>Скачать общий протокол</p>
+                            </div>
+                        </div>
+                        <div class="participate__header participate__header_amount">
+                            <h3>Девочки, Ж10, 2012-2013, 3 км</h3>
+                            <span class="participate__amount">5</span>
+                            <div class="participate__download">
+                                <svg width="24" height="24">
+                                    <use xlink:href="<?=SITE_TEMPLATE_PATH?>/assets/img/sprite.svg#icon-download"></use>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="table__wrapper-adaptive">
+                            <div class="participate__table">
+                                <div class="table__header row">
+                                    <div class="col-1 table__header-title table__header-title_center">Место</div>
+                                    <div class="col-4 table__header-title">Участник</div>
+                                    <div class="col-2 table__header-title">Команда</div>
+                                    <div class="col-2 table__header-title">Год</div>
+                                    <div class="col-1 table__header-title">Разряд</div>
+                                    <div class="col-2 table__header-title">Время</div>
+                                </div>
+    
+                                <div class="table__row row">
+                                    <div class="col-1 table__col table__col_center table__col-first">
+                                        <span class="statistic__medal statistic__medal_golden">1</span>
+                                    </div>
+                                    <div class="col-4 participate__name">
+                                        <img class="participate__avatar"
+                                            src="<?=SITE_TEMPLATE_PATH?>/assets/img/avatar.webp" width="32" height="32"
+                                            alt="Аватар">
+                                        <span>Сальникова Виктория</span>
+                                    </div>
+                                    <div class="col-2">Спутник</div>
+                                    <div class="col-2">2012</div>
+                                    <div class="col-1">2 взр.</div>
+                                    <div class="col-2">9:54</div>
+                                </div>
+                                <div class="table__row row">
+                                    <div class="col-1 table__col table__col_center table__col-first">
+                                        <span class="statistic__medal statistic__medal_silver">2</span>
+                                    </div>
+                                    <div class="col-4 participate__name">
+                                        <img class="participate__avatar"
+                                            src="<?=SITE_TEMPLATE_PATH?>/assets/img/avatar.webp" width="32" height="32"
+                                            alt="Аватар">
+                                        <span>Сальникова Виктория</span>
+                                    </div>
+                                    <div class="col-2">Спутник</div>
+                                    <div class="col-2">2012</div>
+                                    <div class="col-1">2 взр.</div>
+                                    <div class="col-2">9:54</div>
+                                </div>
+                                <div class="table__row row">
+                                    <div class="col-1 table__col table__col_center table__col-first">
+                                        <span class="statistic__medal statistic__medal_bronze">3</span>
+                                    </div>
+                                    <div class="col-4 participate__name">
+                                        <img class="participate__avatar"
+                                            src="<?=SITE_TEMPLATE_PATH?>/assets/img/avatar.webp" width="32" height="32"
+                                            alt="Аватар">
+                                        <span>Сальникова Виктория</span>
+                                    </div>
+                                    <div class="col-2">Спутник</div>
+                                    <div class="col-2">2012</div>
+                                    <div class="col-1">2 взр.</div>
+                                    <div class="col-2">9:54</div>
+                                </div>
+                                <div class="table__row row">
+                                    <div class="col-1 table__col table__col_center table__col-first">4</div>
+                                    <div class="col-4 participate__name">
+                                        <div class="participate__avatar-block">
+                                            <svg width="24" height="24">
+                                                <use xlink:href="<?=SITE_TEMPLATE_PATH?>/assets/img/sprite.svg#icon-women">
+                                                </use>
+                                            </svg>
+                                        </div>
+                                        <span>Кузнецова Василиса</span>
+                                    </div>
+                                    <div class="col-2">Спутник</div>
+                                    <div class="col-2">2012</div>
+                                    <div class="col-1">2 взр.</div>
+                                    <div class="col-2">9:54</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="participate__header participate__header_amount">
+                            <h3>Девочки, Ж12, 2011-2010</h3>
+                            <span class="participate__amount">5</span>
+                            <div class="participate__download">
+                                <svg width="24" height="24">
+                                    <use xlink:href="<?=SITE_TEMPLATE_PATH?>/assets/img/sprite.svg#icon-download"></use>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="table__wrapper-adaptive">
+                            <div class="participate__table">
+                                <div class="table__header row">
+                                    <div class="col-1 table__header-title table__header-title_center">Место</div>
+                                    <div class="col-4 table__header-title">Участник</div>
+                                    <div class="col-2 table__header-title">Команда</div>
+                                    <div class="col-2 table__header-title">Год</div>
+                                    <div class="col-1 table__header-title">Разряд</div>
+                                    <div class="col-2 table__header-title"></div>
+                                </div>
+    
+                                <div class="table__row row">
+                                    <div class="col-1 table__col table__col_center">1</div>
+                                    <div class="col-4 participate__name">
+                                        <img class="participate__avatar"
+                                            src="<?=SITE_TEMPLATE_PATH?>/assets/img/avatar.webp" width="32" height="32"
+                                            alt="Аватар">
+                                        <span>Сальникова Виктория</span>
+                                    </div>
+                                    <div class="col-2">Спутник</div>
+                                    <div class="col-2">2012</div>
+                                    <div class="col-1">2 взр.</div>
+                                    <div class="col-2">9:54</div>
+                                </div>
+                                <div class="table__row row">
+                                    <div class="col-1 table__col table__col_center">2</div>
+                                    <div class="col-4 participate__name">
+                                        <div class="participate__avatar-block">
+                                            <svg width="24" height="24">
+                                                <use xlink:href="<?=SITE_TEMPLATE_PATH?>/assets/img/sprite.svg#icon-women">
+                                                </use>
+                                            </svg>
+                                        </div>
+                                        <span>Кузнецова Василиса</span>
+                                    </div>
+                                    <div class="col-2">Спутник</div>
+                                    <div class="col-2">2012</div>
+                                    <div class="col-1">2 взр.</div>
+                                    <div class="col-2">9:54</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab tab-4">
+                        <div class="photo__header">
+                            <h2>Фото и видео</h2>
+                            <div class="photo__upload">
+                                <input type="file" id="inputGroupFile02" class="form__hidden">
+                                <label class="input-group-text button-secondary button-secondary_with-icon"
+                                    for="inputGroupFile02">
+                                    <svg width="24" height="24" class="new__upload-icon">
+                                        <use xlink:href="<?=SITE_TEMPLATE_PATH?>/assets/img/sprite.svg#icon-upload"></use>
+                                    </svg>
+                                    Загрузить свой материал</label>
+                            </div>
+                        </div>
+                        <div class="photo__block-row">
+                            <h4 class="photo__title">Загружено организатором</h4>
+                            <div class="row">
+                                <div class="col-3 photo__block">
+                                    <picture>
+                                        <source type="image/webp" media="(max-width: 1023px)" srcset="<?=SITE_TEMPLATE_PATH?>/assets/img/photo-adaptive.webp">
+                                        <img class="photo__img" src="<?=SITE_TEMPLATE_PATH?>/assets/img/photo.webp" width="265" height="199" alt="Фото">
+                                    </picture>
+                                </div>
+                                <div class="col-3 photo__block">
+                                    <picture>
+                                        <source type="image/webp" media="(max-width: 1023px)" srcset="<?=SITE_TEMPLATE_PATH?>/assets/img/photo-adaptive.webp">
+                                        <img class="photo__img" src="<?=SITE_TEMPLATE_PATH?>/assets/img/photo.webp" width="265" height="199" alt="Фото">
+                                    </picture>
+                                </div>
+                                <div class="col-3 photo__block">
+                                    <picture>
+                                        <source type="image/webp" media="(max-width: 1023px)" srcset="<?=SITE_TEMPLATE_PATH?>/assets/img/photo-adaptive.webp">
+                                        <img class="photo__img" src="<?=SITE_TEMPLATE_PATH?>/assets/img/photo.webp" width="265" height="199" alt="Фото">
+                                    </picture>
+                                </div>
+                                <div class="col-3 photo__block">
+                                    <picture>
+                                        <source type="image/webp" media="(max-width: 1023px)" srcset="<?=SITE_TEMPLATE_PATH?>/assets/img/photo-adaptive.webp">
+                                        <img class="photo__img" src="<?=SITE_TEMPLATE_PATH?>/assets/img/photo.webp" width="265" height="199" alt="Фото">
+                                    </picture>
+                                </div>
+                                <div class="col-3 photo__block">
+                                    <picture>
+                                        <source type="image/webp" media="(max-width: 1023px)" srcset="<?=SITE_TEMPLATE_PATH?>/assets/img/photo-adaptive.webp">
+                                        <img class="photo__img" src="<?=SITE_TEMPLATE_PATH?>/assets/img/photo.webp" width="265" height="199" alt="Фото">
+                                    </picture>
+                                </div>
+                                <div class="col-3 photo__block">
+                                    <picture>
+                                        <source type="image/webp" media="(max-width: 1023px)" srcset="<?=SITE_TEMPLATE_PATH?>/assets/img/photo-adaptive.webp">
+                                        <img class="photo__img" src="<?=SITE_TEMPLATE_PATH?>/assets/img/photo.webp" width="265" height="199" alt="Фото">
+                                    </picture>
+                                </div>
+                                <div class="col-3 photo__block">
+                                    <picture>
+                                        <source type="image/webp" media="(max-width: 1023px)" srcset="<?=SITE_TEMPLATE_PATH?>/assets/img/photo-adaptive.webp">
+                                        <img class="photo__img" src="<?=SITE_TEMPLATE_PATH?>/assets/img/photo.webp" width="265" height="199" alt="Фото">
+                                    </picture>
+                                </div>
+                                <div class="col-3 photo__block">
+                                    <picture>
+                                        <source type="image/webp" media="(max-width: 1023px)" srcset="<?=SITE_TEMPLATE_PATH?>/assets/img/photo-adaptive.webp">
+                                        <img class="photo__img" src="<?=SITE_TEMPLATE_PATH?>/assets/img/photo.webp" width="265" height="199" alt="Фото">
+                                    </picture>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="photo__block-row">
+                            <div class="photo__name">
+                                <img class="photo__avatar" src="<?=SITE_TEMPLATE_PATH?>/assets/img/avatar.webp"
+                                    width="32" height="32" alt="Аватар">
+                                <h4>Лена Михалева</h4>
+                            </div>
+                            <div class="row photo__row">
+                                <div class="col-3 photo__block">
+                                    <picture>
+                                        <source type="image/webp" media="(max-width: 1023px)" srcset="<?=SITE_TEMPLATE_PATH?>/assets/img/photo-adaptive.webp">
+                                        <img class="photo__img" src="<?=SITE_TEMPLATE_PATH?>/assets/img/photo.webp" width="265" height="199" alt="Фото">
+                                    </picture>
+                                </div>
+                                <div class="col-3 photo__block">
+                                    <picture>
+                                        <source type="image/webp" media="(max-width: 1023px)" srcset="<?=SITE_TEMPLATE_PATH?>/assets/img/photo-adaptive.webp">
+                                        <img class="photo__img" src="<?=SITE_TEMPLATE_PATH?>/assets/img/photo.webp" width="265" height="199" alt="Фото">
+                                    </picture>
+                                </div>
+                                <div class="col-3 photo__block">
+                                    <picture>
+                                        <source type="image/webp" media="(max-width: 1023px)" srcset="<?=SITE_TEMPLATE_PATH?>/assets/img/photo-adaptive.webp">
+                                        <img class="photo__img" src="<?=SITE_TEMPLATE_PATH?>/assets/img/photo.webp" width="265" height="199" alt="Фото">
+                                    </picture>
+                                </div>
+                                <div class="col-3 photo__block">
+                                    <picture>
+                                        <source type="image/webp" media="(max-width: 1023px)" srcset="<?=SITE_TEMPLATE_PATH?>/assets/img/photo-adaptive.webp">
+                                        <img class="photo__img" src="<?=SITE_TEMPLATE_PATH?>/assets/img/photo.webp" width="265" height="199" alt="Фото">
+                                    </picture>
+                                </div>
+                                <div class="col-3 photo__block">
+                                    <picture>
+                                        <source type="image/webp" media="(max-width: 1023px)" srcset="<?=SITE_TEMPLATE_PATH?>/assets/img/photo-adaptive.webp">
+                                        <img class="photo__img" src="<?=SITE_TEMPLATE_PATH?>/assets/img/photo.webp" width="265" height="199" alt="Фото">
+                                    </picture>
+                                </div>
+                                <div class="col-3 photo__block">
+                                    <picture>
+                                        <source type="image/webp" media="(max-width: 1023px)" srcset="<?=SITE_TEMPLATE_PATH?>/assets/img/photo-adaptive.webp">
+                                        <img class="photo__img" src="<?=SITE_TEMPLATE_PATH?>/assets/img/photo.webp" width="265" height="199" alt="Фото">
+                                    </picture>
+                                </div>
+                                <div class="col-3 photo__block">
+                                    <picture>
+                                        <source type="image/webp" media="(max-width: 1023px)" srcset="<?=SITE_TEMPLATE_PATH?>/assets/img/photo-adaptive.webp">
+                                        <img class="photo__img" src="<?=SITE_TEMPLATE_PATH?>/assets/img/photo.webp" width="265" height="199" alt="Фото">
+                                    </picture>
+                                </div>
+                                <div class="col-3 photo__block">
+                                    <picture>
+                                        <source type="image/webp" media="(max-width: 1023px)" srcset="<?=SITE_TEMPLATE_PATH?>/assets/img/photo-adaptive.webp">
+                                        <img class="photo__img" src="<?=SITE_TEMPLATE_PATH?>/assets/img/photo.webp" width="265" height="199" alt="Фото">
+                                    </picture>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    @@INC:(block/footer/default.html)
+    <script src="<?=SITE_TEMPLATE_PATH?>/assets/js/script.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <title>Точка старта</title>
+    <link href="<?=SITE_TEMPLATE_PATH?>/assets/css/style.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body class="body">
+    @@INC:(block/header/auth.html)
+
+    <main class="form">
+        <div class="form__wrapper">
+            <form>
+                <h3>Войти</h3>
+                <div class="form__social-wrapper">
+                    <ul class="form__social-list">
+                        <li>
+                            <a href="#" alt="Telegram">
+                                <img class="form__social-icon" src="<?=SITE_TEMPLATE_PATH?>/assets/img/social/telegram.svg" width="44" height="44" alt="Telegram">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" alt="VKontakte">
+                                <img class="form__social-icon" src="<?=SITE_TEMPLATE_PATH?>/assets/img/social/vk.svg" width="44" height="44" alt="VKontakte">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" alt="Google">
+                                <img class="form__social-icon" src="<?=SITE_TEMPLATE_PATH?>/assets/img/social/google-m.svg" width="44" height="44" alt="Google">
+                            </a>
+                        </li>
+                    </ul>
+                    <span class="form__way">или</span>
+                </div>
+                <div class="form__data">
+                    <div class="form__row">
+                        <label  for="email">Адрес электронной почты</label>
+                        <input id="email" type="email">
+                    </div>
+                    <div class="form__row">
+                        <label for="password">Пароль</label>
+                        <input class="form__password" id="password" type="password">
+                    </div>
+                </div>
+
+                <div class="form__actions">
+                    <a href="./cabinet.html" class="button-primary">Войти</a>
+                    <span class="form__password-forgot">Забыли пароль?</span>
+                </div>
+                <div class="form__registration">
+                    <a href="./registration.html" class="button-secondary form__btn-registration">Регистрация</a>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    @@INC:(block/footer/auth.html)
+    <script src="<?=SITE_TEMPLATE_PATH?>/assets/js/script.min.js"></script>
+</body>
+
+</html>

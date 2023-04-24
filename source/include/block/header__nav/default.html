@@ -1,0 +1,118 @@
+<nav class="header__nav nav header--opened">
+    <div class="nav__wrapper">
+        <div class="nav__item">
+            <div class="nav__logo">
+                <a href="./index.html">
+                    <?= XTZ::getSvgSprite('icon-logo', 106, 36) ?>
+                </a>
+            </div>
+        </div>
+        <ul class="nav__list nav__list_hidden">
+            <li class="nav__item">
+                <a class="nav__link" href="./competitions.html">
+                    Cоревнования
+                </a>
+            </li>
+            <li class="nav__item">
+                <a class="nav__link" href="./results.html"> Результаты </a>
+            </li>
+            <li class="nav__item">
+                <a class="nav__link"> Сервис </a>
+            </li>
+            <li class="nav__item">
+                <a class="nav__link"> Ещё </a>
+            </li>
+        </ul>
+    </div>
+
+    <ul class="nav__list">
+        <li class="nav__item nav__item_actions">
+            <a class="nav__item_add" href="./new-competition-step1.html">
+                <div class="nav__add nav__add_adaptive">
+                    <?= XTZ::getSvgSprite('icon-plus-circle', null, null, 'nav__add-icon') ?>
+                </div>
+                <span class="nav__link nav__link_hidden nav__list_hidden"
+                    >Добавить соревнование</span
+                >
+            </a>
+        </li>
+        <li class="nav__item nav__item_actions nav__list_hidden">
+            <a href="#" class="nav__item_user">
+                <?= XTZ::getSvgSprite('icon-check-circle') ?>
+            </a>
+        </li>
+        <li class="nav__item nav__item_actions nav__list_hidden">
+            <a href="#" class="nav__item_user">
+                <?= XTZ::getSvgSprite('icon-heart') ?>
+            </a>
+        </li>
+        <li class="nav__item nav__item_actions nav__list_hidden">
+            <a href="./authorization.html" class="nav__item_user">
+                <?= XTZ::getSvgSprite('icon-user') ?>
+                <span>Войти</span>
+            </a>
+        </li>
+
+        <li class="nav__item nav__item_burger">
+            <button type="button" class="nav__toggle">
+                <?= XTZ::getSvgSprite('icon-burger') ?>
+            </button>
+        </li>
+    </ul>
+
+    <div class="nav__menu">
+        <button type="button" class="nav__close">
+            <?= XTZ::getSvgSprite('icon-close-l', 19, 19) ?>
+        </button>
+        <div class="nav__menu-actions">
+            <ul class="nav__list nav__list_menu">
+                <li class="nav__item nav__item_actions">
+                    <a href="./authorization.html" class="nav__item_user">
+                        <?= XTZ::getSvgSprite('icon-user') ?>
+                        <span>Войти</span>
+                    </a>
+                </li>
+                <li class="nav__item">
+                    <a href="#" class="nav__item_user">
+                        <?= XTZ::getSvgSprite('icon-check-circle') ?>
+                    </a>
+                </li>
+                <li class="nav__item nav__item_actions">
+                    <a href="#" class="nav__item_user">
+                        <?= XTZ::getSvgSprite('icon-heart') ?>
+                    </a>
+                </li>
+            </ul>
+            <div class="nav__item nav__item_actions">
+                <a class="nav__item_add" href="./new-competition-step1.html">
+                    <div class="nav__add">
+                        <?= XTZ::getSvgSprite('icon-plus-circle', null, null, 'nav__add-icon') ?>
+                    </div>
+                    <span class="nav__link">Добавить соревнование</span>
+                </a>
+            </div>
+        </div>
+
+        <ul class="nav__list nav__list_adaptive">
+            <li class="nav__item">
+                <a
+                    class="nav__link nav__link_adaptive"
+                    href="./competitions.html"
+                >
+                    Cоревнования
+                </a>
+            </li>
+            <li class="nav__item">
+                <a class="nav__link nav__link_adaptive" href="./results.html">
+                    Результаты
+                </a>
+            </li>
+            <li class="nav__item">
+                <a class="nav__link nav__link_adaptive"> Сервис </a>
+            </li>
+            <li class="nav__item">
+                <a class="nav__link nav__link_adaptive"> Ещё </a>
+            </li>
+        </ul>
+    </div>
+</nav>

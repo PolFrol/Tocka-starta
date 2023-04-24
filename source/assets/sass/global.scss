@@ -1,0 +1,252 @@
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+
+  &:visited {
+    color: inherit;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, p {
+  margin: 0;
+}
+
+h1 {
+  font-size: 48px;
+  line-height: 56px;
+  font-weight: 900;
+  color: $text-primary;
+
+  @media (max-width: $adaptive-width) {
+      font-size: 24px;
+      line-height: 32px;
+  }
+}
+
+h2 {
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 800;
+  color: $text-primary;
+
+  @media (max-width: $adaptive-width) {
+      font-size: 20px;
+      line-height: 26px;
+  }
+}
+
+h3 {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 500;
+  color: $text-primary;
+
+  @media (max-width: $adaptive-width) {
+      font-size: 18px;
+      line-height: 26px;
+  }
+}
+
+h4 {
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 500;
+
+  @media (max-width: $adaptive-width) {
+      font-size: 16px;
+      line-height: 26px;
+  }
+}
+
+body {
+  min-width: $modile-width;
+  font-family: 'Inter', 'Arial', sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+  margin: 0 auto;
+  padding: 0;
+  background-color: $bg;
+  overflow-x: hidden;
+  color: $text-primary;
+}
+
+.container {
+  max-width: 1120px;
+  margin: 0 auto;
+
+  @media (max-width: $desktop-width) {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  @media (max-width: $adaptive-width) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+svg {
+  min-width: 24px;
+}
+
+.option {
+  min-width: 317px;
+  padding: $spacing-m $spacing-2l;
+  color: $text-secondary;
+  transition: background-color 0.2s ease;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: $bg;
+  }
+}
+
+.button-primary {
+  display: inline-block;
+  font-family: 'Inter', 'Arial', sans-serif;
+  background-color: $secondary;
+  color: $bg-white;
+  border-radius: 24px;
+  padding: $spacing-m $spacing-2l;
+  border: none;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+
+  &_with-icon {
+    padding: $spacing-s $spacing-2l;
+    display: inline-flex;
+    align-items: center;
+
+    @media (max-width: $adaptive-width) {
+      justify-content: center;
+    }
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: $primary;
+    color: $bg-white;
+  }
+
+  &:disabled {
+    background-color: $bg;
+    color: $text-tertiary;
+  }
+
+  &:visited {
+    color: $bg-white;
+  }
+
+  &__full {
+    @media (max-width: $adaptive-width) {
+      width: 100%;
+    }
+  }
+}
+
+
+.button-secondary {
+  display: inline-block;
+  font-family: 'Inter', 'Arial', sans-serif;
+  background-color: transparent;
+  color: $text-primary;
+  border-radius: 24px;
+  padding: $spacing-m $spacing-2l;
+  border: 2px solid $line;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s;
+
+  &_with-icon {
+    padding: $spacing-s $spacing-2l;
+    display: inline-flex;
+    align-items: center;
+
+    @media (max-width: $adaptive-width) {
+      justify-content: center;
+    }
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    border-color: $primary;
+    color: $text-primary;
+  }
+
+  &:disabled {
+    border-color: $line;
+    color: $text-tertiary;
+  }
+
+  &__full {
+    @media (max-width: $adaptive-width) {
+      width: 100%;
+    }
+  }
+}
+
+input {
+  height: 44px;
+  border: 2px solid $line;
+  border-radius: 4px;
+  padding: $spacing-m $spacing-2l;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+
+  &:hover,
+  &:focus,
+  &:active {
+    border-color: $primary;
+  }
+}
+
+select,
+textarea {
+  border: 2px solid $line;
+  border-radius: 4px;
+  transition: border-color 0.2s ease;
+  cursor: pointer;
+  padding: $spacing-m $spacing-2l;
+
+  &:hover,
+  &:focus,
+  &:active {
+    border-color: $primary;
+  }
+}
+
+label {
+  color: $text-secondary;
+  margin-bottom: 4px;
+}
+
+select {
+  padding: $spacing-s $spacing-2l;
+  height: 44px;
+  appearance: none;
+  background: url('../img/arrow-down.svg') no-repeat 96%;
+
+  @media (max-width: $adaptive-width) {
+    background: url('../img/arrow-down.svg') no-repeat 98%;
+  }
+}

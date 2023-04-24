@@ -1,0 +1,215 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 42px 0 0;
+  gap: $spacing-2l;
+
+  @media (max-width: $adaptive-width) {
+    padding: 0;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+
+    &_adaptive {
+      @media (max-width: $adaptive-width) {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    &_menu {
+      @media (max-width: $adaptive-width) {
+        margin-bottom: $spacing-2xl;
+      }
+    }
+  }
+
+  &__item {
+    cursor: pointer;
+    transition: color 0.2s ease-in-out;
+    position: relative;
+
+    &:not(:last-child) {
+      margin-right: $spacing-2xl;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $secondary;
+    }
+
+    &_actions {
+      &:not(:last-child) {
+        margin-right: $spacing-xl;
+
+        @media (max-width: $adaptive-width) {
+          margin-right: $spacing-2l;
+        }
+      }
+    }
+
+    &_is-active {
+      &::before {
+        position: absolute;
+        content: "";
+        height: 2px;
+        width: 100%;
+        background-color: $secondary;
+        top: -52px;
+      }
+
+      .nav__link {
+        color: $secondary;
+      }
+    }
+
+    &_add {
+      display: flex;
+      align-items: center;
+      gap: $spacing-s;
+
+      &:hover {
+        .nav__add {
+          background-color: $secondary;
+        }
+
+        .nav__link {
+          color: $secondary;
+        }
+      }
+    }
+
+    &_user {
+      display: flex;
+      align-items: center;
+      gap: $spacing-xs;
+    }
+
+    &_burger {
+      display: none;
+
+      @media (max-width: $adaptive-width) {
+        display: flex;
+      }
+    }
+  }
+
+  &__toggle {
+    border: none;
+    background-color: transparent;
+    padding: 0;
+  }
+
+  &__link {
+    @include P-14-medium;
+    color: $primary;
+    transition: color 0.2s ease-in-out;
+
+    &:visited {
+      color: $primary;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $secondary;
+    }
+
+    &_adaptive {
+      @media (max-width: $adaptive-width) {
+        @include h3;
+        margin-bottom: $spacing-2xl;
+        display: block;
+      }
+    }
+  }
+
+  &__add-icon {
+    color: $bg-white;
+  }
+
+  &__avatar-block {
+    width: 32px;
+    height: 32px;
+    background-color: $bg-white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__logo-svg {
+    margin-right: 4px;
+  }
+
+  &__add {
+    min-width: 40px;
+    min-height: 40px;
+    border-radius: 50%;
+    background-color: $primary;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.2s ease-in-out;
+
+    &_adaptive {
+      @media (max-width: $adaptive-width) {
+        min-width: 32px;
+        min-height: 32px;
+      }
+    }
+  }
+
+  &__menu {
+    display: none;
+  }
+
+  &__close {
+    display: block;
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    margin-left: auto;
+  }
+
+  &__menu-actions {
+    margin-top: $spacing-xl;
+    margin-bottom: $spacing-3xl;
+  }
+}
+
+@media (max-width: $desktop-width) {
+  .nav__link_hidden {
+    display: none;
+  }
+}
+
+@media (max-width: $adaptive-width) {
+  .nav__list_hidden {
+    display: none;
+  }
+}
+
+@media (max-width: $adaptive-width) {
+  .header--opened .nav__menu {
+    display: block;
+    height: 570px;
+    padding: $spacing-xl $spacing-2l;
+    margin: -#{$spacing-xl} -#{$spacing-2l};
+    background-color: $bg-white;
+    z-index: 2;
+    position: absolute;
+    top: 24px;
+    left: 20px;
+    right: 20px;
+  }
+}

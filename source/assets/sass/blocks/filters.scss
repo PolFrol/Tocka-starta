@@ -1,0 +1,14 @@
+.filters {
+    margin: $spacing-2l 0;
+    border: none;
+    height: auto;
+    padding-right: $spacing-2xl;
+
+    @media (max-width: $adaptive-width) {
+        display: none;
+    }
+
+    &__title {
+        @include P-14-medium;
+    }
+}

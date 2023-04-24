@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <title>Точка старта</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="<?=SITE_TEMPLATE_PATH?>/assets/css/style.css" rel="stylesheet">
+    <link href="<?=SITE_TEMPLATE_PATH?>/assets/css/datepicker.min.css" rel="stylesheet" type="text/css">
+</head>
+
+<body class="body">
+    @@INC:(block/header/auth.html)
+
+    <main>
+        <div class="container">
+            <a href="#" class="about-header__back about-header__back_new">
+                <div class="about-header__button-back">
+                    <svg width="24" height="24">
+                        <use xlink:href="<?=SITE_TEMPLATE_PATH?>/assets/img/sprite.svg#icon-arrow-left"></use>
+                    </svg>
+                </div>
+                <p>Назад</p>
+            </a>
+
+            <div class="new">
+                <h2 class="registration-on-competition__header">Регистрация на соревнование</h2>
+                <div class="registration-on-competition__content">
+                    <section class="registration-on-competition__competition">
+                        <div class="competition__info">
+                            <div class="competition__photo">
+                                <svg width="100" height="100">
+                                    <use xlink:href="<?=SITE_TEMPLATE_PATH?>/assets/img/sprite.svg#icon-ski"></use>
+                                </svg>
+                            </div>
+                            <div class="competition__descr">
+                                <h3 class="competition__title">Двенадцатое первенство по лыжным гонкам «Даниловская
+                                    лыжня - 2022»</h3>
+                                <p class="competition__place">Еврейская АО, Смидовичский р-н, село Даниловка (624 км)
+                                </p>
+                                <p class="competition__subject registration-on-competition__subject">Первенство по лыжным гонкам среди всех возрастов</p>
+                            </div>
+                        </div>
+                        <aside class="competition__aside">
+                            <h4 class="competition__date">16 – 24 мар, 2022</h4>
+                            <p class="competition__to">Через 12 дней</p>
+                            <h4>Идет регистрация</h4>
+                            <p class="competition__pay competition__pay_cabinet registration-on-competition__pay">Участие бесплатно</p>
+                            <div class="competition__review-wrapper">
+                                <div class="competition__review">
+                                    <div class="competition__avatar-block">
+                                        <img class="competition__avatar"
+                                            src="<?=SITE_TEMPLATE_PATH?>/assets/img/avatar.webp" width="32" height="32"
+                                            alt="Аватар">
+                                    </div>
+                                    <div class="competition__avatar-block competition__avatar-block_second">
+                                        <img class="competition__avatar"
+                                            src="<?=SITE_TEMPLATE_PATH?>/assets/img/avatar-1.webp" width="32"
+                                            height="32" alt="Аватар">
+                                    </div>
+                                    <div class="competition__avatar-block competition__avatar-block_third">
+                                        <img class="competition__avatar"
+                                            src="<?=SITE_TEMPLATE_PATH?>/assets/img/avatar-2.webp" width="32"
+                                            height="32" alt="Аватар">
+                                    </div>
+                                </div>
+                                <span class="competition__amount"> 1 422</span>
+                            </div>
+                        </aside>
+                    </section>
+
+                    <section class="registration-on-competition__form">
+                        <div class="registration-on-competition__block col-6 table__col_full">
+                            <div class="row">
+                                <h4 class="registration-on-competition__title">Участник 1</h4>
+                               
+                                <div class="form__row">
+                                    <label for="last-name">Фамилия*</label>
+                                    <input type="text" id="last-name">
+                                </div>
+
+                                <div class="form__row">
+                                    <label for="name">Имя*</label>
+                                    <input type="text" id="name">
+                                </div>
+
+                                <div class="form__row">
+                                    <label for="second-name">Отчество*</label>
+                                    <input type="text" id="second-name">
+                                </div>
+                                <div class="registration-on-competition__row">
+                                    <div class="col-4 registration-on-competition__col-id">
+                                        <div class="form__row">
+                                            <label for="id">ID в сервисе</label>
+                                            <input type="text" id="id">
+                                        </div>
+                                    </div>
+                                    <div class="col-8 table__col_full">
+                                        <p class="registration-on-competition__text">По ID мы начислим баллы в <a
+                                                href="#" class="registration-on-competition__link">общий рейтинг</a> в
+                                            вашем виде спорта</p>
+                                    </div>
+                                </div>
+
+                                <div class="col-6 table__col_full">
+                                    <div class="form__row">
+                                        <label for="id">Разряд</label>
+                                        <select>
+                                            <option value="">Биатлон</option>
+                                            <option value="">Лыжи</option>
+                                            <option value="">Биатлон</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-6 table__col_full">
+                                    <div class="form__row">
+                                        <label for="date">Год рождения</label>
+                                        <input type="date" id="date" class="form__datepicker">
+                                    </div>
+                                </div>
+
+                                <div class="form__row">
+                                    <label for="name">Команда*</label>
+                                    <input type="text" id="name">
+                                </div>
+
+                                <div class="form__row">
+                                    <label for="name">Группа*</label>
+                                    <select>
+                                        <option value="">Мальчики, М10, 2011-2013 5 км</option>
+                                        <option value="">Мальчики, М10, 2011-2013 5 км</option>
+                                        <option value="">Мальчики, М10, 2011-2013 5 км</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="registration-on-competition__block col-6 table__col_full">
+                            <div class="row">
+                                <div class="registration__header registration-on-competition__title">
+                                    <h4>Участник 2</h4>
+                                    <button type="button" class="settings__btn-trash registration-on-competition__btn-trash">
+                                        <svg width="24" height="24">
+                                            <use xlink:href="<?=SITE_TEMPLATE_PATH?>/assets/img/sprite.svg#icon-trash"></use>
+                                        </svg>
+                                    </button>
+                                </div>
+                                <div class="form__row">
+                                    <label for="last-name">Фамилия*</label>
+                                    <input type="text" id="last-name">
+                                </div>
+
+                                <div class="form__row">
+                                    <label for="name">Имя*</label>
+                                    <input type="text" id="name">
+                                </div>
+
+                                <div class="form__row">
+                                    <label for="second-name">Отчество*</label>
+                                    <input type="text" id="second-name">
+                                </div>
+                                <div class="registration-on-competition__row">
+                                    <div class="col-4 registration-on-competition__col-id">
+                                        <div class="form__row">
+                                            <label for="id">ID в сервисе</label>
+                                            <input type="text" id="id">
+                                        </div>
+                                    </div>
+                                    <div class="col-8 table__col_full">
+                                        <p class="registration-on-competition__text">По ID мы начислим баллы в <a
+                                                class="registration-on-competition__link" href="#">общий рейтинг</a> в
+                                            вашем виде спорта</p>
+                                    </div>
+                                </div>
+
+                                <div class="col-6 table__col_full">
+                                    <div class="form__row">
+                                        <label for="id">Разряд</label>
+                                        <select>
+                                            <option value="">Биатлон</option>
+                                            <option value="">Лыжи</option>
+                                            <option value="">Биатлон</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-6 table__col_full">
+                                    <div class="form__row">
+                                        <label for="date">Год рождения</label>
+                                        <input type="date" id="date" class="form__datepicker">
+                                    </div>
+                                </div>
+
+                                <div class="form__row">
+                                    <label for="name">Команда*</label>
+                                    <input type="text" id="name">
+                                </div>
+
+                                <div class="form__row">
+                                    <label for="name">Группа*</label>
+                                    <select>
+                                        <option value="">Мальчики, М10, 2011-2013 5 км</option>
+                                        <option value="">Мальчики, М10, 2011-2013 5 км</option>
+                                        <option value="">Мальчики, М10, 2011-2013 5 км</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="registration-on-competition__button">
+                            <button type="button" class="button-secondary button-secondary_with-icon button-secondary__full">
+                                <svg width="24" height="24" class="organize__btn-icon">
+                                    <use xlink:href="<?=SITE_TEMPLATE_PATH?>/assets/img/sprite.svg#icon-plus-circle">
+                                    </use>
+                                </svg>
+                                Добавить участника</button>
+                        </div>
+                    </section>
+                    <div class="new__continue new__continue_registration">
+                        <div>
+                            <a href="./registration-success.html" class="button-primary button-primary__full new__btn-back new__btn-adaptive">Зарегистрироватья</a>
+                            <button type="submit" class="button-secondary button-secondary__full new__btn-adaptive">Сохранить в избранное</button>
+                        </div>
+                        <button class="button-secondary button-secondary__full">Отмена</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    @@INC:(block/footer/auth.html)
+    <script src="<?=SITE_TEMPLATE_PATH?>/assets/js/script.min.js"></script>
+    <script src="<?=SITE_TEMPLATE_PATH?>/assets/js/datepicker.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

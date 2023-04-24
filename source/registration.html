@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <title>Точка старта</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="<?=SITE_TEMPLATE_PATH?>/assets/css/style.css" rel="stylesheet">
+    <link href="<?=SITE_TEMPLATE_PATH?>/assets/css/datepicker.min.css" rel="stylesheet" type="text/css">
+</head>
+
+<body class="body">
+    @@INC:(block/header/auth.html)
+
+    <main class="form registration">
+        <div class="form__wrapper form__wrapper_registration">
+            <form>
+                <div class="registration__header">
+                    <h3>Регистрация</h3>
+                    <button type="button" class="button-secondary">Войти</button>
+                </div>
+                <div class="form__social-wrapper">
+                    <ul class="form__social-list form__social-list_registration">
+                        <li>
+                            <a href="#">
+                                <img class="form__social-icon" src="<?=SITE_TEMPLATE_PATH?>/assets/img/social/telegram.svg" width="44" height="44" alt="Telegram">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img class="form__social-icon" src="<?=SITE_TEMPLATE_PATH?>/assets/img/social/vk.svg" width="44" height="44" alt="VKontakte">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img class="form__social-icon" src="<?=SITE_TEMPLATE_PATH?>/assets/img/social/google-m.svg" width="44" height="44" alt="Google">
+                            </a>
+                        </li>
+                    </ul>
+                    <span class="form__way">или</span>
+                </div>
+                <div class="registration__data">
+                    <div>
+                        <div class="registration__col">
+                            <label for="last-name">Фамилия*</label>
+                            <input type="text" id="last-name">
+                        </div>
+                        
+                        <div class="registration__col">
+                            <label for="name">Имя*</label>
+                            <input type="text" id="name">
+                        </div>
+                    
+                        <div class="registration__col">
+                            <label for="second-name">Отчество*</label>
+                            <input type="text" id="second-name">
+                        </div>
+                    </div>
+                    <div class="registration__row">
+                        <div class="registration__col">
+                            <label for="email">Адрес электронной почты*</label>
+                            <input id="email" type="text">
+                        </div>
+                        <div class="registration__col">
+                            <label for="tel">Номер телефона</label>
+                            <input id="tel" type="tel">
+                        </div>
+                    </div>
+
+                    <div class="registration__row">
+                        <div class="registration__col">
+                            <label for="password">Пароль</label>
+                            <input class="form__password" id="password" type="password">
+                        </div>
+                        <div class="registration__col">
+                            <label for="password">Повторите пароль</label>
+                            <input class="form__password" id="password" type="password">
+                        </div>
+                    </div>
+
+                    <div class="registration__row">
+                        <div class="registration__col">
+                            <label for="select">Вид спорта</label>
+
+                            <select>
+                                <option value="" disabled selected>Выбрать 1 или несколько</option>
+                                <option value="">example 1</option>
+                                <option value="">example 2</option>
+                                <option value="">example 3</option>
+                            </select>
+
+                        </div>
+
+                        <div class="registration__col">
+                            <label for="date">Дата рождения</label>
+                            <select>
+                                <option value="">example 1</option>
+                                <option value="">example 2</option>
+                                <option value="">example 3</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <a class="button-primary registration__btn">Регистрация</a>
+
+            </form>
+        </div>
+    </main>
+
+    @@INC:(block/footer/auth.html)
+    <script src="<?=SITE_TEMPLATE_PATH?>/assets/js/script.min.js"></script>
+    <script src="<?=SITE_TEMPLATE_PATH?>/assets/js/datepicker.min.js"></script>
+</body>
+
+</html>

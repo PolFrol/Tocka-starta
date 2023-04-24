@@ -1,0 +1,65 @@
+//шрифты
+@mixin h1 {
+    font-size: 48px;
+    line-height: 56px;
+    font-weight: 900;
+    color: $text-primary;
+
+    @media (max-width: $adaptive-width) {
+        font-size: 24px;
+        line-height: 32px;
+    }
+}
+
+@mixin h2 {
+    font-size: 30px;
+    line-height: 36px;
+    font-weight: 800;
+    color: $text-primary;
+
+    @media (max-width: $adaptive-width) {
+        font-size: 20px;
+        line-height: 26px;
+    }
+}
+
+@mixin h3 {
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 500;
+    color: $text-primary;
+
+    @media (max-width: $adaptive-width) {
+        font-size: 18px;
+        line-height: 26px;
+    }
+}
+
+@mixin h4 {
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 500;
+
+    @media (max-width: $adaptive-width) {
+        font-size: 16px;
+        line-height: 26px;
+    }
+}
+
+@mixin P-16 {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+}
+
+@mixin P-14-medium {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 500;
+}
+
+@mixin P-12 {
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 500;
+}

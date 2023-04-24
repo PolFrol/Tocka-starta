@@ -1,0 +1,80 @@
+.table {
+    margin: 0;
+    &__header {
+        margin: 0;
+        background-color: $bg;
+        padding: $spacing-s;
+    }
+
+    &__header-title {
+        @include P-12;
+        color: $text-tertiary;
+
+        &_right {
+            text-align: right;
+        }
+
+        &_center {
+            text-align: center;
+        }
+
+    }
+
+    &__row {
+        margin: 0;
+        padding: $spacing-m $spacing-s;
+        border-top: 1px solid $line;
+        color: $text-secondary;
+        display: flex;
+        align-items: center;
+
+        &_without-header {
+            @media (max-width: $adaptive-width) {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: $spacing-m $spacing-s;
+                margin: 0 -#{$spacing-2l};
+            }
+        }
+    }
+
+    &__col {
+        &_right {
+            text-align: right;
+        }
+
+        &_center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &_date {
+            color: $text-tertiary;
+        }
+
+        &_full {
+            @media (max-width: $adaptive-width) {
+              width: 100%;
+            }
+          }
+    }
+
+    // &__col-first {
+    //     background-color: $bg-white;
+    //     position: sticky;
+    //     left: 0;
+    // }
+
+    &__time {
+        margin: $spacing-m 0;
+    }
+
+    &__wrapper-adaptive {
+        @media (max-width: $adaptive-width) {
+            overflow: auto;
+            margin: 0 -#{$spacing-2l};
+            margin-bottom: $spacing-2l;
+        }
+    }
+}

@@ -1,0 +1,62 @@
+.slider {
+    margin-bottom: 86px;
+
+    @media (max-width: $adaptive-width) {
+        margin-bottom: $spacing-4xl;
+    }
+    
+    &__title {
+        margin-bottom: $spacing-xl;
+
+        @media (max-width: $adaptive-width) {
+            margin-top: $spacing-s;
+        }
+    }
+
+    &__wrapper {
+        position: relative;
+
+        @media (max-width: $adaptive-width) {
+            margin: 0 -#{$spacing-2l};
+        }
+    }
+
+    &__photo {
+        display: block;
+        margin: 0 auto;
+    }
+
+    &__plate {
+        width: 410px;
+        position: absolute;
+        background: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(16px);
+        border-radius: 24px;
+        top: 40px;
+        left: 44px;
+        padding: $spacing-2xl $spacing-4xl $spacing-2xl $spacing-2xl;
+        z-index: 1;
+
+        @media (max-width: $adaptive-width) {
+            width: auto;
+            top: 26px;
+            left: 20px;
+            right: 20px;
+            padding: $spacing-2xl $spacing-2l $spacing-2l;
+        }
+    }
+
+    &__plate-title {
+        margin-bottom: $spacing-m;
+    }
+
+    &__plate-descr {
+        @include P-14-medium;
+        color: $text-primary;
+        margin-bottom: $spacing-3xl;
+
+        @media (max-width: $adaptive-width) {
+            margin-bottom: $spacing-2l;
+        }
+    }
+}

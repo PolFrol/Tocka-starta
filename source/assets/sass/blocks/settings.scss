@@ -1,0 +1,92 @@
+.settings {
+    @media (max-width: $adaptive-width) {
+        margin: 0 -#{$spacing-2l};
+    }
+
+    &__info-block {
+        padding-top: $spacing-l;
+        margin-bottom: $spacing-l;
+
+        &_line {
+            border-top: 1px solid $line;
+        }
+
+        @media (max-width: $adaptive-width) {
+            padding: $spacing-l $spacing-2l 0;
+        }
+    }
+
+    &__title {
+        margin-bottom: $spacing-xl;
+    }
+
+    &__header  {
+        @media (max-width: $adaptive-width) {
+            padding-left: $spacing-2l;
+        }
+    }
+
+    &__col {
+        display: flex;
+        align-items: center;
+    }
+
+    &__row {
+        align-items: center;
+        position: relative;
+
+        @media (max-width: $adaptive-width) {
+            margin-bottom: $spacing-xl;
+        }
+    }
+
+    &__type {
+        @media (max-width: $adaptive-width) {
+            order: 2;
+        }
+    }
+
+    &__btn-trash {
+        width: 40px;
+        height: 40px;
+        background-color: transparent;
+        border: none;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: $spacing-s;
+
+        @media (max-width: $adaptive-width) {
+            order: 1;
+            margin-left: auto;
+            position: absolute;
+            right: 8px;
+            top: -#{$spacing-2l};
+        }
+    }
+
+    &__rank {
+        flex: 1;
+    }
+
+    &__add-row {
+        margin-top: $spacing-xs;
+        margin-bottom: $spacing-l;
+
+        &_cart {
+            @media (max-width: $adaptive-width) {
+                margin-top: -#{$spacing-2l};
+                margin-bottom: 46px;
+            }
+        }
+    }
+
+    &__button-block {
+        margin-bottom: $spacing-3xl;
+
+        @media (max-width: $adaptive-width) {
+            margin-top: $spacing-s;
+        }
+    }
+}

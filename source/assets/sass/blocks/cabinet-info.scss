@@ -1,0 +1,104 @@
+.cabinet-info {
+    padding: 48px 0 70px;
+
+    @media (max-width: $adaptive-width) {
+        padding-bottom: 0;
+    }
+
+    &__avatar-block {
+        width: 80px;
+        height: 80px;
+        background-color: $bg-white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: $spacing-xl;
+        position: relative;
+
+        @media (max-width: $adaptive-width) {
+            width: 58px;
+            height: 58px;
+        }
+    }
+
+    &__edit {
+        position: absolute;
+        width: 32px;
+        height: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $bg-white;
+        border-radius: 50%;
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.12);
+        top: -4px;
+        right: -12px;
+        border: 1px solid $line;
+        color: $primary;
+    }
+
+    &__row {
+        align-items: center;
+
+        @media (max-width: $adaptive-width) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+
+    &__col {
+        display: flex;
+        align-items: center;
+    }
+
+    &__data {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__id {
+        @include P-14-medium;
+        color: $text-secondary;
+    }
+
+    &__id-number {
+        @include P-14-medium;
+        color: $secondary;
+    }
+
+    &__text {
+        @include P-16;
+        color: $text-primary;
+    }
+
+    &__desrc {
+        @include P-14-medium;
+        color: $text-secondary;
+    }
+
+    &__actions-block {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        border: 2px solid $line;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &_social {
+            background-color: $bg-white;
+            margin-right: $spacing-s;
+        }
+    }
+
+    &__add-icon {
+        color: $primary;
+    }
+
+    &__table {
+        @media (max-width: $adaptive-width) {
+            min-width: 1120px;
+        }
+    }
+}

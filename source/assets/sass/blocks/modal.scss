@@ -1,0 +1,73 @@
+.modal {
+    &__header {
+        border-bottom: none;
+        padding: $spacing-2xl 40px $spacing-xl;
+
+        @media (max-width: $adaptive-width) {
+            padding: 42px $spacing-2l $spacing-xl;
+        }
+    }
+
+    &__close {
+        border: none;
+        background-color: transparent;
+        padding: 0;
+        position: absolute;
+        top: 8px;
+        right: 8px;
+    }
+
+    &__body {
+        padding: $spacing-2xl 40px 70px;
+
+        @media (max-width: $adaptive-width) {
+            padding: 0 $spacing-2l $spacing-2xl;
+        }
+    }
+
+    &__checkbox-container {
+        margin-left: $spacing-l;
+
+        @media (max-width: $adaptive-width) {
+            margin: 0;
+        }
+    }
+
+    &__checkbox {
+        margin-top: $spacing-l;
+    }
+
+    &__row {
+        margin-bottom: $spacing-2l;
+    }
+
+    &__add-col {
+        margin-top: $spacing-2l;
+        margin-left: $spacing-2l;
+    }
+
+    &__footer {
+        padding: $spacing-xl 40px;
+        display: flex;
+        justify-content: space-between;
+        border-top: 2px solid $line;
+
+        @media (max-width: $adaptive-width) {
+            padding: $spacing-2l;
+            flex-direction: column;
+        }
+    }
+
+    &__btn-add {
+        color: $text-tertiary;
+        background-color: transparent;
+        border: none;
+        padding: 0;
+    }
+
+    &__button {
+        @media (max-width: $adaptive-width) {
+            margin-bottom: $spacing-l;
+        }
+    }
+}

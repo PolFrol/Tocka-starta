@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <title>Точка старта</title>
+    <link href="<?=SITE_TEMPLATE_PATH?>/assets/css/style.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    @@INC:(block/header/default.html)
+
+    <main class="main">
+        <div class="container">
+            <h1 class="main__title">Онлайн площадка для поиска и размещения соревнований</h1>
+            <h3 class="main__decription">Сделано спортсменами</h3>
+
+            <section>
+                <div class="main__city">
+                    <h3>Соревнования рядом</h3>
+                    <select class="main__current-city">
+                        <option value="">
+                            <span>Екатеринбург</span>&ensp;<span>+ 200 км</span>
+                        </option>
+                        <option value="">
+                            <span>Москва</span>&ensp;<span>+ 1200 км</span>
+                        </option>
+                    </select>
+                </div>
+                <div class="main__plate plate">
+                    <ul class="plate__wrapper">
+                        <li class="plate__item plate__item_chel">
+                            <div class="plate__count">
+                                <h3>16</h3>
+                            </div>
+                            <div class="plate__descr">
+                                <h4 class="plate__city">Челябинск</h4>
+                                <span class="plate__speed">160 км/ 2,5 ч</span>
+                            </div>
+                        </li>
+                        <li class="plate__item plate__item_tagil">
+                            <div class="plate__count">
+                                <h3>16</h3>
+                            </div>
+                            <div class="plate__descr">
+                                <h4 class="plate__city">Нижний Тагил</h4>
+                                <span class="plate__speed">120 км/ 2 ч</span>
+                            </div>
+                        </li>
+                        <li class="plate__item plate__item_novo">
+                            <div class="plate__count">
+                                <h3>1</h3>
+                            </div>
+                            <div class="plate__descr">
+                                <h4 class="plate__city">Новоуральск</h4>
+                                <span class="plate__speed">120 км/ 2 ч</span>
+                            </div>
+                        </li>
+                        <li class="plate__item plate__item_pushma">
+                            <div class="plate__count">
+                                <h3>8</h3>
+                            </div>
+                            <div class="plate__descr">
+                                <h4 class="plate__city">Верхняя Пышма</h4>
+                                <span class="plate__speed">120 км/ 2 ч</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="slider">
+                <h3 class="slider__title">Популярные старты</h3>
+                <div class="slider__wrapper">
+
+                    <div class="owl-carousel owl-theme owl-loaded">
+                        <div class="owl-stage-outer">
+                            <div class="owl-stage">
+                                <div class="owl-item">
+                                    <picture>
+                                        <source media="(max-width: 764px)"
+                                            srcset="<?=SITE_TEMPLATE_PATH?>/assets/img/a-slider.webp">
+                                        <img class="slider__photo" src="<?=SITE_TEMPLATE_PATH?>/assets/img/slider.webp"
+                                            width="1120" height="460" alt="Слайдер">
+                                    </picture>
+                                </div>
+                                <div class="owl-item">
+                                    <picture>
+                                        <source media="(max-width: 764px)"
+                                            srcset="<?=SITE_TEMPLATE_PATH?>/assets/img/a-slider.webp">
+                                        <img class="slider__photo" src="<?=SITE_TEMPLATE_PATH?>/assets/img/slider.webp"
+                                            width="1120" height="460" alt="Слайдер">
+                                    </picture>
+                                </div>
+                                <div class="owl-item">
+                                    <picture>
+                                        <source media="(max-width: 764px)"
+                                            srcset="<?=SITE_TEMPLATE_PATH?>/assets/img/a-slider.webp">
+                                        <img class="slider__photo" src="<?=SITE_TEMPLATE_PATH?>/assets/img/slider.webp"
+                                            width="1120" height="460" alt="Слайдер">
+                                    </picture>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="owl-nav">
+                            <div class="owl-prev">
+                               
+                            </div>
+                            <div class="owl-next">
+                               
+                            </div>
+                        </div>
+                        <div class="owl-dots">
+                            <div class="owl-dot active"></div>
+                            <div class="owl-dot"></div>
+                            <div class="owl-dot"></div>
+                            <div class="owl-dot"></div>
+                            <div class="owl-dot"></div>
+                        </div>
+                    </div>
+
+                    <div class="slider__plate">
+                        <h2 class="slider__plate-title">Чемпионат России по фристайлу</h2>
+                        <p class="slider__plate-descr">Москва, 12 -24 марта</p>
+                        <button class="button-primary" type="button">Подробнее</button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="capa">
+                <h2 class="capa__title">Возможности площадки</h2>
+                <ul class="capa__list">
+                    <li class="capa__item">
+                        <a href="#">
+                            <img class="capa__img" src="<?=SITE_TEMPLATE_PATH?>/assets/img/sportsman.webp" height="319"
+                                alt="Спортсменам">
+                            <div class="capa__descr-wrapper">
+                                <div class="capa__title-wrapper">
+                                    <h4 class="capa__descr">Спортсменам</h4>
+                                    <span class="capa__arrow">
+                                        <svg width="24" height="24">
+                                            <use
+                                                xlink:href="<?=SITE_TEMPLATE_PATH?>/assets/img/sprite.svg#icon-arrow-right">
+                                            </use>
+                                        </svg>
+                                    </span>
+                                </div>
+                                <span class="capa__text">Возможности сервиса</span>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="capa__item">
+                        <a href="#">
+                            <img class="capa__img" src="<?=SITE_TEMPLATE_PATH?>/assets/img/org.webp" height="319"
+                                alt="Организаторам">
+                            <div class="capa__descr-wrapper">
+                                <div class="capa__title-wrapper">
+                                    <h4 class="capa__descr">Организаторам</h4>
+                                    <span class="capa__arrow">
+                                        <svg width="24" height="24">
+                                            <use
+                                                xlink:href="<?=SITE_TEMPLATE_PATH?>/assets/img/sprite.svg#icon-arrow-right">
+                                            </use>
+                                        </svg>
+                                    </span>
+                                </div>
+                                <span class="capa__text">Как добавить соренование, почему у нас нужно размещаться</span>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="capa__item">
+                        <a href="#">
+                            <img class="capa__img" src="<?=SITE_TEMPLATE_PATH?>/assets/img/partner.webp" height="319"
+                                alt="Партнерам">
+                            <div class="capa__descr-wrapper">
+                                <div class="capa__title-wrapper">
+                                    <h4 class="capa__descr">Партнерам</h4>
+                                    <span class="capa__arrow">
+                                        <svg width="24" height="24">
+                                            <use
+                                                xlink:href="<?=SITE_TEMPLATE_PATH?>/assets/img/sprite.svg#icon-arrow-right">
+                                            </use>
+                                        </svg>
+                                    </span>
+                                </div>
+                                <span class="capa__text">Частным тренерам, сервисным центрам, людям оказывающих
+                                    сопутствующие
+                                    услуги</span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="app">
+                <div class="app__wrapper">
+                    <div>
+                        <div class="app__title">
+                            <div class="app__icon"></div>
+                            <h2>Мобильное<br>приложение</h2>
+                        </div>
+
+                        <h4 class="app__descr">Доступно на всех платформах</h4>
+                    </div>
+
+                    <div class="app__badge">
+                        <img src="<?=SITE_TEMPLATE_PATH?>/assets/img/badge-iOS.webp" width="119" height="39"
+                            alt="Приложение ios">
+                        <img src="<?=SITE_TEMPLATE_PATH?>/assets/img/badge-android.webp" width="136" height="41"
+                            alt="Приложение Android">
+                    </div>
+
+                    <div class="app__iphone-wrapper">
+                        <img class="app__iphone app__iphone_big"
+                            src="<?=SITE_TEMPLATE_PATH?>/assets/img/iPhone-Pro.webp" width="205" height="414"
+                            alt="iphone">
+                        <img class="app__iphone app__iphone_small"
+                            src="<?=SITE_TEMPLATE_PATH?>/assets/img/iPhone-Pro-small.webp" width="187" height="378"
+                            alt="iphone">
+                    </div>
+
+                    <div class="app__iphone-wrapper-adaptive">
+                        <img src="<?=SITE_TEMPLATE_PATH?>/assets/img/a-iphone.webp" width="261" height="301"
+                            alt="iphone">
+                    </div>
+                </div>
+
+            </section>
+        </div>
+
+    </main>
+
+    @@INC:(block/footer/default.html)
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="<?=SITE_TEMPLATE_PATH?>/assets/js/owl.carousel.min.js"></script>
+    <script src="<?=SITE_TEMPLATE_PATH?>/assets/js/owl.navigation.min.js"></script>
+    <script src="<?=SITE_TEMPLATE_PATH?>/assets/js/owl.autorefresh.min.js"></script>
+    <script src="<?=SITE_TEMPLATE_PATH?>/assets/js/owl.autoplay.min.js"></script>
+    <script src="<?=SITE_TEMPLATE_PATH?>/assets/js/script.min.js"></script>
+</body>
+
+</html>

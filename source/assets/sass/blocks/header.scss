@@ -1,0 +1,5 @@
+.header {
+  @media (max-width: $adaptive-width) {
+    padding: $spacing-xl $spacing-2l;
+  }
+}

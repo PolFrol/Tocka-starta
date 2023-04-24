@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <title>Точка старта</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="<?=SITE_TEMPLATE_PATH?>/assets/css/style.css" rel="stylesheet">
+</head>
+
+<body class="body">
+    @@INC:(block/header/auth.html)
+
+    <main>
+        <div class="container">
+            <a href="#" class="about-header__back about-header__back_new">
+                <div class="about-header__button-back">
+                    <svg width="24" height="24">
+                        <use xlink:href="<?=SITE_TEMPLATE_PATH?>/assets/img/sprite.svg#icon-arrow-left"></use>
+                    </svg>
+                </div>
+                <p>Назад</p>
+            </a>
+        </div>
+
+        <div class="new">
+            <div class="new__wrapper new__wrapper_success">
+                <div class="new__success">
+                    <svg width="51" height="51">
+                        <use xlink:href="<?=SITE_TEMPLATE_PATH?>/assets/img/sprite.svg#icon-success"></use>
+                    </svg>
+                    <h2 class="new__success-title">Поздравляем, соревнование отправлено на модерацию</h2>
+                    <p class="new__success-text">Если все хорошо, соревнование опубликуется в течении 24 часов. При возникновении сложностей, свяжемся с вами по указанному номер</p>
+                    <a class="button-primary" href="./cabinet.html">В кабинет</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    @@INC:(block/footer/auth.html)
+    <script src="<?=SITE_TEMPLATE_PATH?>/assets/js/script.min.js"></script>
+</body>
+
+</html>

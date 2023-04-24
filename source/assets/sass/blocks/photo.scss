@@ -1,0 +1,61 @@
+.photo {
+    &__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: $spacing-xl;
+
+        @media (max-width: $adaptive-width) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+
+    &__block {
+        border-radius: 16px;
+        margin-bottom: $spacing-xl;
+
+        @media (max-width: $adaptive-width) {
+            width: auto;
+            padding: 0 $spacing-s;
+            margin-bottom: $spacing-l;
+        }
+    }
+
+    &__title {
+        margin-bottom: 43px;
+
+        @media (max-width: $adaptive-width) {
+            margin-bottom: $spacing-xl;
+        }
+    }
+
+    &__row {
+        margin-top: $spacing-xl;
+    }
+
+    &__block-row {
+        margin-bottom: 46px;
+    }
+
+    &__upload {
+        margin-top: $spacing-l;
+    }
+
+    &__name {
+        display: flex;
+        align-items: center;
+    }
+
+    &__avatar {
+        margin-right: $spacing-s;
+        border-radius: 50%;
+    }
+
+    &__img {
+        @media (max-width: $adaptive-width) {
+            width: 133px;
+            height: 99px;
+        }
+    }
+}

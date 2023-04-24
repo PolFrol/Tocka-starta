@@ -1,0 +1,31 @@
+<header class="header container">
+    <div class="header__wrapper">@@INC:(block/header__nav/default.html)</div>
+
+    <div class="header__actions actions">
+        <h1 class="actions__title">Соревнования</h1>
+
+        <ul class="actions__list">
+            <button class="actions__item" type="button">
+                <div class="actions__active-icon">
+                    <?= XTZ::getSvgSprite('icon-list') ?>
+
+                    <?= XTZ::getSvgSprite('icon-arrow-down', null, null, 'actions__list-dropdown') ?>
+                </div>
+            </button>
+            <button class="actions__item actions__item_adaptive" type="button">
+                <?= XTZ::getSvgSprite('icon-map-pin') ?>
+            </button>
+            <button class="actions__item actions__item_adaptive" type="button">
+                <?= XTZ::getSvgSprite('icon-calendar') ?>
+            </button>
+        </ul>
+    </div>
+
+    <div class="search">@@INC:(block/header__search/competitions.html)</div>
+
+    <select class="header__filters filters">
+        <option value="">Ещё фильтры</option>
+        <option value="">Фильтры</option>
+        <option value="">Фильтры</option>
+    </select>
+</header>

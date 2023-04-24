@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <title>Точка старта</title>
+    <link href="<?=SITE_TEMPLATE_PATH?>/assets/css/style.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <header class="header container">
+        <div class="header__wrapper">
+            <nav class="header__nav nav">
+                <div class="nav__wrapper">
+                    <div class="nav__item">
+                        <div class="nav__logo">
+                            <a href="./index.html">
+                                <svg class="nav__logo-svg" width="106" height="36"><use xlink:href="<?=SITE_TEMPLATE_PATH?>/assets/img/sprite.svg#icon-logo"></use></svg>
+                            </a>
+                        </div>
+                    </div>
+                    <ul class="nav__list nav__list_hidden">
+                        <li class="nav__item">
+                            <a class="nav__link" href="./competitions.html">
+                                Cоревнования
+                            </a>
+                        </li>
+                        <li class="nav__item nav__item_is-active">
+                            <a class="nav__link">
+                                Результаты
+                            </a>
+                        </li>
+                        <li class="nav__item">
+                            <a class="nav__link">
+                                Сервис
+                            </a>
+                        </li>
+                        <li class="nav__item">
+                            <a class="nav__link">
+                                Ещё
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <ul class="nav__list nav__list_actions">
+                    <li class="nav__item nav__item_actions nav__item_add">
+                        <div class="nav__add">
+                            <svg width="24" height="24" class="nav__add-icon">
+                                <use xlink:href="<?=SITE_TEMPLATE_PATH?>/assets/img/sprite.svg#icon-plus-circle"></use>
+                            </svg>
+                        </div>
+                        <span class="nav__link nav__list_hidden">Добавить соревнование</span>
+                    </li>
+                    <li class="nav__item nav__item_actions nav__list_hidden">
+                        <a href="#" class="nav__item_user">
+                            <svg width="24" height="24">
+                                <use xlink:href="<?=SITE_TEMPLATE_PATH?>/assets/img/sprite.svg#icon-check-circle"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="nav__item nav__item_actions nav__list_hidden">
+                        <a href="#" class="nav__item_user">
+                            <svg width="24" height="24">
+                                <use xlink:href="<?=SITE_TEMPLATE_PATH?>/assets/img/sprite.svg#icon-heart"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="nav__item nav__item_actions nav__item_user nav__list_hidden">
+                        <svg width="24" height="24">
+                            <use xlink:href="<?=SITE_TEMPLATE_PATH?>/assets/img/sprite.svg#icon-user"></use>
+                        </svg>
+                        <span>Войти</span>
+                    </li>
+
+                    <li class="nav__item nav__item_burger">
+                        <button type="button" class="nav__toggle">
+                            <svg width="24" height="24">
+                                <use xlink:href="<?=SITE_TEMPLATE_PATH?>/assets/img/sprite.svg#icon-burger"></use>
+                            </svg>
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="header__actions actions">
+            <h1 class="actions__title">Результаты</h1>
+
+            <ul class="actions__list">
+                <button class="actions__item" type="button">
+                    <div class="actions__active-icon">
+                        <svg width="24" height="24">
+                            <use xlink:href="<?=SITE_TEMPLATE_PATH?>/assets/img/sprite.svg#icon-list"></use>
+                        </svg>
+
+                        <svg width="24" height="24" class="actions__list-dropdown">
+                            <use xlink:href="<?=SITE_TEMPLATE_PATH?>/assets/img/sprite.svg#icon-arrow-down"></use>
+                        </svg>
+                    </div>
+                </button>
+                <button class="actions__item actions__item_adaptive" type="button">
+                    <svg width="24" height="24">
+                        <use xlink:href="<?=SITE_TEMPLATE_PATH?>/assets/img/sprite.svg#icon-map-pin"></use>
+                    </svg>
+                </button>
+                <button class="actions__item actions__item_adaptive" type="button">
+                    <svg width="24" height="24">
+                        <use xlink:href="<?=SITE_TEMPLATE_PATH?>/assets/img/sprite.svg#icon-calendar"></use>
+                    </svg>
+                </button>
+            </ul>
+        </div>
+        <div class="search">
+            <div class="search__wrapper search__wrapper_competitions">
+                <ul class="search__list">
+                    <li class="search__item-wrapper">
+                        <select class="search__item">
+                            <option value="">Вид спорта</option>
+                            <option value="">Лыжи</option>
+                            <option value="">Коньки</option>
+                        </select>
+                    </li>
+                    <li class="search__item-wrapper">
+                        <select class="search__item">
+                            <option value="">Место проведения</option>
+                            <option value="">Москва</option>
+                            <option value="">Питер</option>
+                        </select>
+                    </li>
+                    <li class="search__item-wrapper">
+                        <select class="search__item">
+                            <option value="">Когда</option>
+                            <option value="">завтра</option>
+                            <option value="">через год</option>
+                        </select>
+                    </li>
+                    <li class="search__item-wrapper">
+                        <select class="search__item">
+                            <option value="">Возраст</option>
+                            <option value="">от 12</option>
+                            <option value="">от 40</option>
+                        </select>
+                    </li>
+                    <li class="search__item search__item_filter">
+                        <select class="search__filter">
+                            <option value="">Ещё фильтры</option>
+                            <option value="">Фильтры</option>
+                            <option value="">Фильтры</option>
+                        </select>
+                    </li>
+                    <li class="search__item-button">
+                        <button type="button" class="search__button">
+                            <svg width="24" height="24">
+                                <use xlink:href="<?=SITE_TEMPLATE_PATH?>/assets/img/sprite.svg#icon-search"></use>
+                            </svg>
+
+                            <span class="search__button-text">Найти</span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <select class="header__filters filters">
+            <option value="">Ещё фильтры</option>
+            <option value="">Фильтры</option>
+            <option value="">Фильтры</option>
+        </select>
+    </header>
+
+    <main class="main main_competition">
+        <div class="container">
+            <section class="main__city main__city_competition">
+                <h4>Нашлось 123 соревнования</h4>
+                <div class="main__nearest-city">
+                    <select class="main__current-city">
+                        <option value="">
+                            <span class="main__current-city-name main__current-city-name_competition">Ближайшие</span>
+                        </option>
+                        <option value="">
+                            <span class="main__current-city-name main__current-city-name_competition">Через месяц</span>
+                        </option>
+                    </select>
+                    <select class="main__current-city">
+                        <option value="">
+                            <span>Екатеринбург</span>&ensp;<span>+ 200 км</span>
+                        </option>
+                        <option value="">
+                            <span>Москва</span>&ensp;<span>+ 1200 км</span>
+                        </option>
+                    </select>
+                </div>
+            </section>
+    
+            <section class="competition results">
+                <ul class="competition__list">
+                    <li class="competition__item">
+                        <div class="competition__container">
+                            <div class="competition__info">
+                                <div class="competition__photo">
+                                    <svg width="100" height="100">
+                                        <use xlink:href="<?=SITE_TEMPLATE_PATH?>/assets/img/sprite.svg#icon-ski"></use>
+                                    </svg>
+                                </div>
+                                <div class="competition__descr">
+                                    <h3 class="competition__title">Двенадцатое первенство по лыжным гонкам «Даниловская лыжня - 2022»</h3>
+                                    <p class="competition__place">Еврейская АО, Смидовичский р-н,  село Даниловка  (624 км)</p>
+                                    <p class="competition__subject">Первенство по лыжным гонкам среди всех возрастов</p>
+                                </div>
+                            </div>
+                            <aside class="competition__aside">
+                                <h4 class="results__date">16 – 24 мар, 2022</h4>
+    
+                                <button type="button" class="button-primary competition__btn" disabled>Завершены</button>
+    
+                                <div class="results__actions">
+                                    <div class="results__icon-block">
+                                        <svg width="24" height="24">
+                                            <use xlink:href="<?=SITE_TEMPLATE_PATH?>/assets/img/sprite.svg#icon-protocol"></use>
+                                        </svg>
+                                    </div>
+    
+                                    <div class="results__icon-block">
+                                        <svg width="24" height="24">
+                                            <use xlink:href="<?=SITE_TEMPLATE_PATH?>/assets/img/sprite.svg#icon-image"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+    
+                                <div class="competition__review-wrapper">
+                                    <div class="competition__review">
+                                        <div class="competition__avatar-block">
+                                            <img class="competition__avatar" src="<?=SITE_TEMPLATE_PATH?>/assets/img/avatar.webp" width="32" height="32" alt="Аватар">
+                                        </div>
+                                        <div class="competition__avatar-block competition__avatar-block_second">
+                                            <img class="competition__avatar" src="<?=SITE_TEMPLATE_PATH?>/assets/img/avatar-1.webp" width="32" height="32" alt="Аватар">
+                                        </div>
+                                        <div class="competition__avatar-block competition__avatar-block_third">
+                                            <img class="competition__avatar" src="<?=SITE_TEMPLATE_PATH?>/assets/img/avatar-2.webp" width="32" height="32" alt="Аватар">
+                                        </div>
+                                    </div>
+                                    <span class="competition__amount">540</span>
+                                </div>
+                            </aside>
+                        </div>
+                    </li>
+                    <li class="competition__item">
+                        <div class="competition__container">
+                            <div class="competition__info">
+                                <div class="competition__photo">
+                                    <svg width="100" height="100">
+                                        <use xlink:href="<?=SITE_TEMPLATE_PATH?>/assets/img/sprite.svg#icon-ski"></use>
+                                    </svg>
+                                </div>
+                                <div class="competition__descr">
+                                    <h3 class="competition__title">Двенадцатое первенство по лыжным гонкам «Даниловская лыжня - 2022»</h3>
+                                    <p class="competition__place">Еврейская АО, Смидовичский р-н,  село Даниловка  (624 км)</p>
+                                    <p class="competition__subject">Первенство по лыжным гонкам среди всех возрастов</p>
+                                </div>
+                            </div>
+                            <aside class="competition__aside">
+                                <h4 class="results__date">16 – 24 мар, 2022</h4>
+    
+                                <button type="button" class="button-primary competition__btn" disabled>Завершены</button>
+    
+                                <div class="results__actions">
+                                    <div class="results__icon-block">
+                                        <svg width="24" height="24">
+                                            <use xlink:href="<?=SITE_TEMPLATE_PATH?>/assets/img/sprite.svg#icon-protocol"></use>
+                                        </svg>
+                                    </div>
+    
+                                    <div class="results__icon-block">
+                                        <svg width="24" height="24">
+                                            <use xlink:href="<?=SITE_TEMPLATE_PATH?>/assets/img/sprite.svg#icon-image"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+    
+                                <div class="competition__review-wrapper">
+                                    <div class="competition__review">
+                                        <div class="competition__avatar-block">
+                                            <img class="competition__avatar" src="<?=SITE_TEMPLATE_PATH?>/assets/img/avatar.webp" width="32" height="32" alt="Аватар">
+                                        </div>
+                                        <div class="competition__avatar-block competition__avatar-block_second">
+                                            <img class="competition__avatar" src="<?=SITE_TEMPLATE_PATH?>/assets/img/avatar-1.webp" width="32" height="32" alt="Аватар">
+                                        </div>
+                                        <div class="competition__avatar-block competition__avatar-block_third">
+                                            <img class="competition__avatar" src="<?=SITE_TEMPLATE_PATH?>/assets/img/avatar-2.webp" width="32" height="32" alt="Аватар">
+                                        </div>
+                                    </div>
+                                    <span class="competition__amount">540</span>
+                                </div>
+                            </aside>
+                        </div>
+                    </li>
+                </ul>
+    
+                <div class="competition__show-more">
+                    <button type="button" class="button-primary">Показать еще</button>
+                    <p class="competition__show-more-text">Старница 1 из 23</p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    @@INC:(block/footer/default.html)
+    <script src="<?=SITE_TEMPLATE_PATH?>/assets/js/script.min.js"></script>
+</body>
+
+</html>

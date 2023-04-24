@@ -1,0 +1,116 @@
+.about-header {
+
+    &__back {
+        display: inline-flex;
+        align-items: center;
+        margin: $spacing-2l 0 $spacing-2xl;
+        color: $text-primary;
+        cursor: pointer;
+        transition: color 0.3s ease-in-out;
+
+        &:hover,
+        &:focus,
+        &:active {
+            color: $secondary;
+        }
+
+        @media (max-width: $adaptive-width) {
+            margin: $spacing-2xl 0 $spacing-l;
+        }
+
+        &_new {
+            margin: 28px 0 $spacing-2l;
+
+            @media (max-width: $adaptive-width) {
+                margin-top: 0;
+                padding-left: $spacing-2l;
+            }
+        }
+    }
+
+    &__button-back {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        background-color: $bg-white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: $spacing-m;
+    }
+
+    &__title {
+        max-width: 705px;
+        margin-bottom: $spacing-xl;
+
+        @media (max-width: $adaptive-width) {
+            max-width: 100%;
+        }
+    }
+
+    &__row { 
+        margin-bottom: $spacing-2xl;
+
+        @media (max-width: $adaptive-width) {
+            flex-direction: column;
+        }
+    }
+
+    &__text {
+        @include P-12;
+        color: $text-tertiary;
+        margin-bottom: $spacing-m;
+    }
+
+    &__add-info {
+        color: $text-tertiary;
+
+        &_when {
+            margin-top: $spacing-xs;
+        }
+
+        &_untill {
+            margin: 0 $spacing-l;
+
+            @media (max-width: $adaptive-width) {
+                margin: $spacing-s 0 $spacing-l;
+            }
+        }
+
+        &_where {
+            margin-left: $spacing-s;
+        }
+
+        &_free {
+            margin-left: $spacing-s;
+
+            @media (max-width: $adaptive-width) {
+                margin: 0;
+            }
+        }
+    }
+
+    &__amount {
+        position: relative;
+        left: 84px;
+        top: 6px;
+    }
+
+    &__register {
+        display: flex;
+        align-items: center;
+        margin-bottom: 60px;
+
+        @media (max-width: $adaptive-width) {
+            flex-direction: column;
+            margin-bottom: $spacing-s;
+        }
+    }
+}
+
+@media (max-width: $adaptive-width) {
+    .about-header__col {
+        margin-bottom: $spacing-xl;
+        width: 100%;
+    }
+}

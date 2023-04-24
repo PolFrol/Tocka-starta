@@ -1,0 +1,96 @@
+
+.owl-theme {
+	// Styling Next and Prev buttons
+	.owl-nav {
+		text-align: center;
+		-webkit-tap-highlight-color: transparent;
+
+		[class*='owl-'] {
+			min-width: 64px;
+			min-height: 64px;
+			border-radius: 50%;
+			border: 1px solid $line;
+			box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.04);
+			background-color: $bg-white;
+			position: absolute;
+			z-index: 1;
+			display: inline-block;
+			cursor: pointer;
+			top: 50%;
+			transform: translate(0, -50%);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			&:hover {
+				opacity: 0.3;
+				color:$nav-color-hover;
+				text-decoration: none;
+			}
+
+			@media (max-width: $adaptive-width) {
+				display: none;
+			}
+		}
+
+		.owl-prev {
+            left: -32px;
+        }
+
+        .owl-next {
+            right: -32px;
+        }
+
+		.disabled {
+			opacity: $nav-disabled-opacity;
+			cursor: default;
+		}
+	}
+
+	// Styling dots
+	.owl-nav.disabled + .owl-dots {
+		margin-top: 10px;
+	}
+
+	.owl-dots {
+		position: absolute;
+        bottom: 55px;
+        left: 44px;
+        z-index: 1;
+		text-align: center;
+		-webkit-tap-highlight-color: transparent;
+
+		.owl-dot {
+			display: inline-block;
+			zoom: 1;
+			*display: inline;
+
+			span {
+				min-width: 8px;
+				height: 8px;
+				border-radius: 50%;
+				background-color: $bg-white;
+				opacity: 0.5;
+				display: block;
+				-webkit-backface-visibility: visible;
+				transition: opacity 200ms ease;
+				border-radius: $dot-rounded;
+				margin-right: $spacing-m;
+			}
+
+			&.active,
+			&:hover {
+				span {
+					box-shadow: 0 0 0 4px $bg-white;
+					opacity: 1;
+					background-color: transparent;
+				}
+			}
+		}
+
+		@media (max-width: $adaptive-width) {
+            bottom: $spacing-2xl;
+            left: 24px;
+        }
+	}
+}

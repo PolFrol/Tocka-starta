@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <title>Точка старта</title>
+    <link href="<?=SITE_TEMPLATE_PATH?>/assets/css/style.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    @@INC:(block/header/competitions.html)
+
+    <main class="main main_competition">
+        <div class="container">
+            <section class="main__city main__city_competition">
+                <h4>Нашлось 123 соревнования</h4>
+                <div class="main__nearest-city">
+                    <select class="main__current-city">
+                        <option value="">
+                            <span class="main__current-city-name main__current-city-name_competition">Ближайшие</span>
+                        </option>
+                        <option value="">
+                            <span class="main__current-city-name main__current-city-name_competition">Через месяц</span>
+                        </option>
+                    </select>
+                    <select class="main__current-city">
+                        <option value="">
+                            <span>Екатеринбург</span>&ensp;<span>+ 200 км</span>
+                        </option>
+                        <option value="">
+                            <span>Москва</span>&ensp;<span>+ 1200 км</span>
+                        </option>
+                    </select>
+                </div>
+            </section>
+    
+            <section class="competition">
+                <ul class="competition__list">
+    
+                    <li class="competition__item">
+                        <a href="./competitions-about.html">
+                            @@INC:(component/competition__container.html)
+                        </a>
+                    </li>
+    
+                    <li class="competition__item">
+                        @@INC:(component/competition__container.html)
+                    </li>
+                </ul>
+    
+                <div class="competition__show-more">
+                    <button type="button" class="button-secondary">Показать еще</button>
+                    <p class="competition__show-more-text">Старница 1 из 23</p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    @@INC:(block/footer/default.html)
+    <script src="<?=SITE_TEMPLATE_PATH?>/assets/js/script.min.js"></script>
+</body>
+
+</html>

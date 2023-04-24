@@ -1,0 +1,45 @@
+//Global
+@import "./fonts.scss";
+@import "./variables.scss";
+@import "./global.scss";
+@import "./mixins.scss";
+
+//Blocks
+@import "./blocks/header.scss";
+@import "./blocks/nav.scss";
+@import "./blocks/footer.scss";
+@import "./blocks/search.scss";
+@import "./blocks/main.scss";
+@import "./blocks/plate.scss";
+@import "./blocks/slider.scss";
+@import "./blocks/capa.scss";
+@import "./blocks/app.scss";
+@import "./blocks/footer-nav.scss";
+@import "./blocks/social.scss";
+@import "./blocks/competition.scss";
+@import "./blocks/actions.scss";
+@import "./blocks/filters.scss";
+@import "./blocks/results.scss";
+@import "./blocks/about-header.scss";
+@import './blocks/body.scss';
+@import './blocks/form.scss';
+@import './blocks/authorization-footer.scss';
+@import './blocks/registration.scss';
+@import './blocks/tabs-nav.scss';
+@import './blocks/tab.scss';
+@import './blocks/tabs.scss';
+@import './blocks/table.scss';
+@import './blocks/cabinet-info.scss';
+@import './blocks/statistic.scss';
+@import './blocks/flex.scss';
+@import './blocks/participate.scss';
+@import './blocks/organize.scss';
+@import './blocks/new.scss';
+@import './blocks/participate.scss';
+@import './blocks/photo.scss';
+@import './blocks/add-results.scss';
+@import './blocks/modal.scss';
+@import './blocks/settings.scss';
+@import './blocks/registration-on-competition.scss';
+@import './scss/owl.carousel.scss';
+@import './scss/owl.theme.default.scss';

@@ -1,0 +1,65 @@
+.footer {
+    padding: 74px 0 59px;
+    background-color: $primary;
+    color: $bg-white;
+
+    @media (max-width: $adaptive-width) {
+        padding: $spacing-3xl $spacing-2l;
+    }
+
+    &__wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+
+        @media (max-width: $desktop-width) {
+            grid-template-columns: 242px 1fr 1fr;
+        }
+
+        @media (max-width: $adaptive-width) {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    &__logo {
+        margin-bottom: $spacing-2l;
+    }
+
+    &__descr {
+        @include P-14-medium;
+        color: $bg-white;
+        opacity: 0.5;
+        margin-bottom: $spacing-2xl;
+
+        @media (max-width: $adaptive-width) {
+            margin-bottom: $spacing-xl;
+        }
+    }
+
+    &__support-wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__support {
+        @include P-14-medium;
+        color: $bg-white;
+        opacity: 0.5;
+    }
+
+    &__tel {
+        @include h4;
+        color: $bg-white;
+    }
+
+    &__copyright {
+        @include P-14-medium;
+        color: $bg-white;
+        opacity: 0.5;
+        margin-top: 66px;
+
+        @media (max-width: $adaptive-width) {
+            margin-top: $spacing-4xl;
+        }
+    }
+}

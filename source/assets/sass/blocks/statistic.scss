@@ -1,0 +1,94 @@
+.statistic {
+    &__title {
+        margin-bottom: $spacing-2xl;
+    }
+
+    &__block-prize {
+        min-width: 170px;
+        min-height: 110px;
+        padding: $spacing-s $spacing-l $spacing-2l;
+        border: 1px solid $line;
+        border-radius: 16px;
+
+        &:not(:last-child) {
+            margin-right: $spacing-2l;
+        }
+    }
+
+    &__prize {
+        display: flex;
+        align-items: center;
+
+        &_rating {
+            margin-top: $spacing-xl;
+        }
+    }
+
+    &__place {
+        display: block;
+        color: $text-secondary;
+        margin-bottom: $spacing-m;
+    }
+
+    &__prize-amount {
+        margin-left: $spacing-l;
+    }
+
+    &__brunch-icon {
+        margin-left: $spacing-s;
+    }
+
+    &__prize-row {
+        display: flex;
+        padding-bottom: $spacing-4xl;
+
+        @media (max-width: $adaptive-width) {
+            padding-bottom: $spacing-2xl;
+            overflow: auto;
+        }
+    }
+
+    &__toggle {
+        display: flex;
+        align-items: center;
+        padding: $spacing-2l 0;
+
+        @media (max-width: $adaptive-width) {
+            padding: $spacing-l 0 $spacing-2xl;
+        }
+    }
+
+    &__toggle-item {
+        padding: $spacing-s $spacing-l;
+        color: $text-tertiary;
+
+        &.is-active {
+            background-color: $bg;
+            border-radius: 24px;
+            color: $text-primary;
+        }
+    }
+
+    &__medal {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $bg-white;
+        padding: 0;
+
+        &_golden {
+            background-color: #FA8B25 !important; /*чтобы переопределить фон бустрапа*/
+        }
+
+        &_silver {
+            background-color: #87B2BB !important; /*чтобы переопределить фон бустрапа*/
+        }
+
+        &_bronze {
+            background-color: #B98F78 !important; /*чтобы переопределить фон бустрапа*/
+        }
+    }
+}

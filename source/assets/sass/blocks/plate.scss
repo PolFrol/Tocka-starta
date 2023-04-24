@@ -1,0 +1,78 @@
+.plate {
+    @media (max-width: $adaptive-width) {
+        overflow-x: auto;
+        margin: 0 -#{$spacing-2l};
+    }
+
+    &__wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: $spacing-2l;
+        margin-bottom: 65px;
+
+        @media (max-width: $adaptive-width) {
+            gap: $spacing-l;
+            margin: 0 0 $spacing-2xl;
+        }
+    }
+
+    &__item {
+        border: 1px solid $line;
+        box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.04);
+        border-radius: 16px;
+
+        &_chel {
+            background-color: #FDECE7;
+        }
+
+        &_tagil {
+            background-color: #F2DEF5;
+        }
+
+        &_novo {
+            background-color: #E4F2F0;
+        }
+
+        &_pushma {
+            background-color: #DDF7FF;
+        }
+
+        @media (max-width: $adaptive-width) {
+            min-width: 248px;
+
+            &:first-child {
+                margin-left: $spacing-2l;
+            }
+
+            &:last-child {
+                margin-right: $spacing-2l;
+            }
+        }
+    }
+
+    &__count {
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+        background-color: $bg-white;
+        margin: $spacing-2l;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__descr {
+        background-color: $bg-white;
+        border-radius: 0 0 16px 16px;
+        padding: $spacing-l $spacing-l $spacing-xl $spacing-2l;
+    }
+
+    &__city {
+        margin-bottom: $spacing-xs;
+    }
+
+    &__speed {
+        @include P-14-medium;
+        color: $text-tertiary;
+    }
+}

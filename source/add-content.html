@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <title>Точка старта</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="<?=SITE_TEMPLATE_PATH?>/assets/css/style.css" rel="stylesheet">
+</head>
+
+<body class="body">
+    @@INC:(block/header/auth.html)
+
+    <main>
+        <div class="container">
+            <div class="about-header__back about-header__back_new">
+                <div class="about-header__button-back">
+                    <svg width="24" height="24">
+                        <use xlink:href="<?=SITE_TEMPLATE_PATH?>/assets/img/sprite.svg#icon-arrow-left"></use>
+                    </svg>
+                </div>
+                <p>Назад</p>
+            </div>
+        </div>
+
+        <div class="new">
+            <div class="new__wrapper new__wrapper_content">
+                <div>
+                    <h2>Добавить контент</h2>
+                    <h4 class="new__content">Двенадцатое первенство по лыжным гонкам «Даниловская лыжня - 2022»</h4>
+                    <div class="new__content-upload">
+                        <input type="file" id="inputGroupFile02" class="form__hidden">
+                            <label class="input-group-text button-secondary button-secondary_with-icon" for="inputGroupFile02">
+                                <svg width="24" height="24" class="new__upload-icon">
+                                    <use xlink:href="<?=SITE_TEMPLATE_PATH?>/assets/img/sprite.svg#icon-upload"></use>
+                                </svg>
+                                Загрузить</label>
+                        <p class="new__content-text">Добавьте или перенести сюда фото и видео с соревнований. Формат png, jpeg, avi</p>
+                    </div>
+
+                    <div class="row new__content-photo-container">
+                        <div class="col-3 new__content-photo">
+                            <button type="button" class="new__btn-trash">
+                                <svg width="24" height="24">
+                                    <use xlink:href="<?=SITE_TEMPLATE_PATH?>/assets/img/sprite.svg#icon-trash"></use>
+                                </svg>
+                            </button>
+                            <picture>
+                                <source type="image/webp" media="(max-width: 1023px)" srcset="<?=SITE_TEMPLATE_PATH?>/assets/img/place-adaptive.webp">
+                                <img class="new__img" src="<?=SITE_TEMPLATE_PATH?>/assets/img/place.webp" width="150" height="112" alt="Контент">
+                            </picture>
+                        </div>
+                        <div class="col-3 new__content-photo">
+                            <button type="button" class="new__btn-trash">
+                                <svg width="24" height="24">
+                                    <use xlink:href="<?=SITE_TEMPLATE_PATH?>/assets/img/sprite.svg#icon-trash"></use>
+                                </svg>
+                            </button>
+                            <picture>
+                                <source type="image/webp" media="(max-width: 1023px)" srcset="<?=SITE_TEMPLATE_PATH?>/assets/img/place-adaptive.webp">
+                                <img class="new__img" src="<?=SITE_TEMPLATE_PATH?>/assets/img/place.webp" width="150" height="112" alt="Контент">
+                            </picture>
+                        </div>
+                        <div class="col-3 new__content-photo">
+                            <button type="button" class="new__btn-trash">
+                                <svg width="24" height="24">
+                                    <use xlink:href="<?=SITE_TEMPLATE_PATH?>/assets/img/sprite.svg#icon-trash"></use>
+                                </svg>
+                            </button>
+                            <picture>
+                                <source type="image/webp" media="(max-width: 1023px)" srcset="<?=SITE_TEMPLATE_PATH?>/assets/img/place-adaptive.webp">
+                                <img class="new__img" src="<?=SITE_TEMPLATE_PATH?>/assets/img/place.webp" width="150" height="112" alt="Контент">
+                            </picture>
+                        </div>
+                        <div class="col-3 new__content-photo">
+                            <button type="button" class="new__btn-trash">
+                                <svg width="24" height="24">
+                                    <use xlink:href="<?=SITE_TEMPLATE_PATH?>/assets/img/sprite.svg#icon-trash"></use>
+                                </svg>
+                            </button>
+                            <picture>
+                                <source type="image/webp" media="(max-width: 1023px)" srcset="<?=SITE_TEMPLATE_PATH?>/assets/img/place-adaptive.webp">
+                                <img class="new__img" src="<?=SITE_TEMPLATE_PATH?>/assets/img/place.webp" width="150" height="112" alt="Контент">
+                            </picture>
+                        </div>
+                        <div class="col-3 new__content-photo">
+                            <button type="button" class="new__btn-trash">
+                                <svg width="24" height="24">
+                                    <use xlink:href="<?=SITE_TEMPLATE_PATH?>/assets/img/sprite.svg#icon-trash"></use>
+                                </svg>
+                            </button>
+                            <picture>
+                                <source type="image/webp" media="(max-width: 1023px)" srcset="<?=SITE_TEMPLATE_PATH?>/assets/img/place-adaptive.webp">
+                                <img class="new__img" src="<?=SITE_TEMPLATE_PATH?>/assets/img/place.webp" width="150" height="112" alt="Контент">
+                            </picture>
+                        </div>
+                    </div>
+                </div>
+                <div class="new__continue">
+                    <button type="submit" class="button-primary new__btn-adaptive">Сохранить</button>
+                    <button type="submit" class="button-secondary">Отмена</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    @@INC:(block/footer/auth.html)
+    <script src="<?=SITE_TEMPLATE_PATH?>/assets/js/script.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

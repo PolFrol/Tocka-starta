@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <title>Точка старта</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="<?=SITE_TEMPLATE_PATH?>/assets/css/style.css" rel="stylesheet">
+</head>
+
+<body class="body">
+    @@INC:(block/header/auth.html)
+
+    <main>
+        <div class="container">
+            <a href="#" class="about-header__back about-header__back_new">
+                <div class="about-header__button-back">
+                    <svg width="24" height="24">
+                        <use xlink:href="<?=SITE_TEMPLATE_PATH?>/assets/img/sprite.svg#icon-arrow-left"></use>
+                    </svg>
+                </div>
+                <p>Назад</p>
+            </a>
+
+            <div class="new">
+                <div class="new__wrapper new__wrapper_add-content add-results">
+                    <h2>Добавить результаты</h2>
+                    <h4 class="add-results__content">Двенадцатое первенство по лыжным гонкам «Даниловская лыжня - 2022»
+                    </h4>
+                    <div class="add-results__content-upload">
+                        <h4>Протокол соревнований</h4>
+                        <p class="add-results__descr">Дополнительный вариант, если регистрация проходила вне нашего
+                            ресурса Точка старта</p>
+                        <div class="add-results__upload">
+                            <input type="file" id="inputGroupFile02" class="form__hidden">
+                            <label class="input-group-text button-secondary button-secondary_with-icon button-secondary__full"
+                                for="inputGroupFile02">
+                                <svg width="24" height="24" class="new__upload-icon">
+                                    <use xlink:href="<?=SITE_TEMPLATE_PATH?>/assets/img/sprite.svg#icon-upload"></use>
+                                </svg>
+                                Загрузить</label>
+                            <p class="new__content-text">В формате pdf, word, exel</p>
+                        </div>
+                    </div>
+
+                    <div class="add-results__alert-wrapper">
+                        <div class="add-results__alert">
+                            <svg width="24" height="24" class="add-results__icon-info">
+                                <use xlink:href="<?=SITE_TEMPLATE_PATH?>/assets/img/sprite.svg#icon-info"></use>
+                            </svg>
+                            <p>Мы сформировали протокол по результатам регистрации учатников и вашим заявленным группам.
+                                Проставьте время у участников, мы автоматически сформируем места. Если нужно вывести
+                                дополнительные стольцы или убрать лишние - воспользуйтесь кнопкой Настроить таблицу. Для
+                                добавления участника регистрировашегося непосредственное на старте, воспользуйтесь
+                                последней строкой в таблице — Добавить участника</p>
+                            <svg width="24" height="24" class="add-results__icon-close">
+                                <use xlink:href="<?=SITE_TEMPLATE_PATH?>/assets/img/sprite.svg#icon-close"></use>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <div class="participate__header participate__header_amount add-results__table">
+                        <div class="add-results__header">
+                            <h3>Девочки, Ж10, 2012-2013, 3 км</h3>
+                            <div class="add-results__amount">5 <span class="add-results__participant">участников</span></div>
+                        </div>
+
+                        <button type="button" class="button-secondary button-secondary_with-icon add-results__settings" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal">
+                            <svg width="24" height="24" class="organize__btn-icon">
+                                <use xlink:href="<?=SITE_TEMPLATE_PATH?>/assets/img/sprite.svg#icon-settings"></use>
+                            </svg>
+                            Настроить таблицу
+                        </button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog modal-lg modal-fullscreen-lg-down">
+                                <div class="modal-content">
+                                    <div class="modal-header modal__header">
+                                        <h2 class="modal-title" id="exampleModalLabel">Настройка таблицы</h2>
+                                        <button type="button" class="modal__close" data-bs-dismiss="modal"
+                                            aria-label="Close">
+                                            <svg width="24" height="24">
+                                                <use xlink:href="<?=SITE_TEMPLATE_PATH?>/assets/img/sprite.svg#icon-close"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body modal__body">
+                                        <div class="row">
+                                            <div class="col-6 modal__row table__col_full">
+                                                <div class="form__row">
+                                                    <label>Шаблон таблицы</label>
+                                                    <select>
+                                                        <option value="">Лыжные гонки</option>
+                                                        <option value="">Коньки</option>
+                                                        <option value="">Хоккей</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <h4>Столбцы</h4>
+                                            <div class="modal__checkbox-container">
+                                                <div class="form__group">
+                                                    <span class="form__number">1</span>
+                                                    <div class="form-check form__check-wrapper modal__checkbox">
+                                                        <input class="form-check-input form__checkbox" type="checkbox" id="gridCheck">
+                                                        <label class="form-check-label form__checkbox-label" for="gridCheck">
+                                                            Место
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="form__group">
+                                                    <span class="form__number">2</span>
+                                                    <div class="form-check form__check-wrapper modal__checkbox">
+                                                        <input class="form-check-input form__checkbox" type="checkbox" id="gridCheck">
+                                                        <label class="form-check-label form__checkbox-label" for="gridCheck">
+                                                            Участник
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="form__group">
+                                                    <span class="form__number">3</span>
+                                                    <div class="form-check form__check-wrapper modal__checkbox">
+                                                        <input class="form-check-input form__checkbox" type="checkbox" id="gridCheck">
+                                                        <label class="form-check-label form__checkbox-label" for="gridCheck">
+                                                            Возраст
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="form__group">
+                                                    <span class="form__number">4</span>
+                                                    <div class="form-check form__check-wrapper modal__checkbox">
+                                                        <input class="form-check-input form__checkbox" type="checkbox" id="gridCheck">
+                                                        <label class="form-check-label form__checkbox-label" for="gridCheck">
+                                                            Время
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="modal__add-col">
+                                                    <svg width="24" height="24" class="new__btn-add-icon">
+                                                        <use xlink:href="<?=SITE_TEMPLATE_PATH?>/assets/img/sprite.svg#icon-plus-circle"></use>
+                                                    </svg>
+                                                    <button class="modal__btn-add">Добавить свой столбец</button>
+                                                </div>
+                                            </div>
+                                        </div>  
+                                    </div>
+                                    <div class="modal-footer modal__footer">
+                                        <button type="button" class="button-primary button-primary__full modal__button">Сохранить</button>
+                                        <button type="button" class="button-secondary button-secondary__full"
+                                            data-bs-dismiss="modal">Отмена</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="table__wrapper-adaptive ">
+                        <div class="add-results__content-table">
+                            <div class="table__header row">
+                                <div class="col-1 table__header-title table__header-title_center">Место</div>
+                                <div class="col-5 table__header-title">Участник</div>
+                                <div class="col-2 table__header-title">Команда</div>
+                                <div class="col-2 table__header-title">Год</div>
+                                <div class="col-1 table__header-title">Разряд</div>
+                                <div class="col-1 table__header-title">Время</div>
+                            </div>
+    
+                            <div class="table__row row">
+                                <div class="col-1 table__col table__col_center">
+                                    <span class="statistic__medal statistic__medal_golden">1</span>
+                                </div>
+                                <div class="col-5 participate__name">
+                                    <img class="participate__avatar" src="<?=SITE_TEMPLATE_PATH?>/assets/img/avatar.webp"
+                                        width="32" height="32" alt="Аватар">
+                                    <span>Сальникова Виктория</span>
+                                </div>
+                                <div class="col-2">Спутник</div>
+                                <div class="col-2">2012</div>
+                                <div class="col-1">2 взр.</div>
+                                <div class="col-1">9:54</div>
+                            </div>
+                            <div class="table__row row">
+                                <div class="col-1 table__col table__col_center">
+                                    <span class="statistic__medal statistic__medal_silver">2</span>
+                                </div>
+                                <div class="col-5 participate__name">
+                                    <img class="participate__avatar" src="<?=SITE_TEMPLATE_PATH?>/assets/img/avatar.webp"
+                                        width="32" height="32" alt="Аватар">
+                                    <span>Сальникова Виктория</span>
+                                </div>
+                                <div class="col-2">Спутник</div>
+                                <div class="col-2">2012</div>
+                                <div class="col-1">2 взр.</div>
+                                <div class="col-1">9:54</div>
+                            </div>
+                            <div class="table__row row">
+                                <div class="col-1 table__col table__col_center">
+                                    <span class="statistic__medal statistic__medal_bronze">3</span>
+                                </div>
+                                <div class="col-5 participate__name">
+                                    <img class="participate__avatar" src="<?=SITE_TEMPLATE_PATH?>/assets/img/avatar.webp"
+                                        width="32" height="32" alt="Аватар">
+                                    <span>Сальникова Виктория</span>
+                                </div>
+                                <div class="col-2">Спутник</div>
+                                <div class="col-2">2012</div>
+                                <div class="col-1">2 взр.</div>
+                                <div class="col-1">9:54</div>
+                            </div>
+                            <div class="table__row row">
+                                <div class="col-1 table__col table__col_center">4</div>
+                                <div class="col-5 participate__name">
+                                    <div class="participate__avatar-block">
+                                        <svg width="24" height="24">
+                                            <use xlink:href="<?=SITE_TEMPLATE_PATH?>/assets/img/sprite.svg#icon-women">
+                                            </use>
+                                        </svg>
+                                    </div>
+                                    <span>Кузнецова Василиса</span>
+                                </div>
+                                <div class="col-2">Спутник</div>
+                                <div class="col-2">2012</div>
+                                <div class="col-1">2 взр.</div>
+                                <div class="col-1">9:54</div>
+                            </div>
+                            <div class="table__row row">
+                                <div class="col-1 table__col table__col_center"></div>
+                                <div class="col-5 participate__name">
+                                    <svg width="32" height="32">
+                                        <use xlink:href="<?=SITE_TEMPLATE_PATH?>/assets/img/sprite.svg#icon-plus-big">
+                                        </use>
+                                    </svg>
+                                    <span class="add-results__add-person">Добавить участника</span>
+                                </div>
+                                <div class="col-2"></div>
+                                <div class="col-2"></div>
+                                <div class="col-1"></div>
+                                <div class="col-1"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" class="add-results__add-group">
+                        <h3 class="add-results__add-group-text">Добавить группу</h3>
+                    </button>
+                    <div class="new__continue">
+                        <div class="competition__footer-actions">
+                            <button type="submit" class="button-secondary new__btn-back organize__btn">Сохранить и опубликовать</button>
+                            <button type="submit" class="button-primary organize__btn">Сохранить черновик</button>
+                        </div>
+                        <button class="button-secondary">Отмена</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    @@INC:(block/footer/auth.html)
+    <script src="<?=SITE_TEMPLATE_PATH?>/assets/js/script.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
