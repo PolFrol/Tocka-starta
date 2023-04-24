@@ -20,20 +20,22 @@
         border: 1px solid $line;
         box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.04);
         border-radius: 16px;
+        display: flex;
+        flex-direction: column;
 
-        &_chel {
+        &_1 {
             background-color: #FDECE7;
         }
 
-        &_tagil {
+        &_2 {
             background-color: #F2DEF5;
         }
 
-        &_novo {
+        &_3 {
             background-color: #E4F2F0;
         }
 
-        &_pushma {
+        &_4 {
             background-color: #DDF7FF;
         }
 
@@ -65,6 +67,7 @@
         background-color: $bg-white;
         border-radius: 0 0 16px 16px;
         padding: $spacing-l $spacing-l $spacing-xl $spacing-2l;
+        flex: 1;
     }
 
     &__city {

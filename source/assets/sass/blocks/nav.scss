@@ -212,4 +212,10 @@
     left: 20px;
     right: 20px;
   }
+
+  .nav__item_is-active {
+    &::before {
+      content: none;
+    }
+  }
 }
